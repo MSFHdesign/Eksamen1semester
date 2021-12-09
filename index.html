@@ -8,6 +8,7 @@
 	<meta name="keywords" content="Cykler, MTB, Danmarks største udvalg, Aarhus største udvalg, Elcykler, cykel-udstyr, cykelsko">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
 
 	<!-- favicon = ikon i faneblad / browser -->
 	<link rel="icon" type="image/x-icon" href="img/..." />
@@ -16,18 +17,22 @@
 <!-- content her fra -->
 <body class="wrapper"> <!-- Grid master -->
     <header class="top"> <!-- Skal indeholder Logo på mobil version -->
-    <a href="http://www.jensen.msfh.dk"><img src="img/JensenLogo.svg" alt="Jensens nye logo" id="logoTop"></a>
+    <a href="http://www.jensen.msfh.dk"><img src="img/ikoner/JensenLogo.svg" alt="Jensens nye logo" id="logoTop"></a>
     </header>
 <!--navigationsbar burger menu -->
     <nav class="navbar"> 
+        <div class="burger">
         <input id="dropdown" class="knap2" type="checkbox">
 <label for="dropdown" class="dropdownnav"> ☰ </label>
-
+</div>
 
 <!-- Søge funktion -->
 <form class="search">
 <input type="text" name="search" placeholder="Søg">
 </form>
+
+
+<img src="img/ikoner/kurv.svg" alt="Jensen cykler indkøbskurv" id="kurv">
 
     </nav> 
 
@@ -35,7 +40,7 @@
 
     <div class="infobox"> <!-- flexbox med 3 infokasser -->
         <span id="box1">
-            Gratis fragt v/500,- 
+            Gratis fragt v/500,-
         </span>
         <span id="box2">
             Byt julegaver t/m 31/1/2022 
@@ -47,15 +52,20 @@
 
     <article class="infographic"> <!--Infographic-->
          <!-- her skal infographic respnsiv på størrelse -->
-         <div class="infographicText"></div>
-         <picture>
-            <source srcset="img/infographic.jpg" media="(min-width: 700px)">
-                <img src="img/infographic.jpg" alt="Få hjælp til at vælge din næste cykel. få alt information om dele på en MTB lige her. " class="infographicPic">
-        </picture>
-        
-        <div class="tooltip">Sadle
-            <span class="tooltiptext">Du sidder sjældent, det er derfor vigtigt at sadlen er indstillet helt korrekt. Der er mange faktorer der har indflydelse på hvordan du sidder bedst på din MTB. Der kan med fordel læses vores fulde artikel her.</span>
-          </div>
+
+                <img src="img/foto/infographic.jpg" alt="Få hjælp til at vælge din næste cykel. få alt information om dele på en MTB lige her. " usemap="#MTB" width="100vw" height="100%" class="infographicPic">
+
+                <map name="MTB">
+                    <area shape="rect" coords="125,0, 200,50" onclick="sadle()" alt="tekst til sadlen">
+                    <area shape="rect" coords="250,90 310,130" onclick="bremser()" alt="tekst til styret">
+                    <area shape="rect" coords="40,40, 110,140" onclick="gear()" alt="tekst til gear">
+                    <area shape="rect" coords="140,180, 220,160" onclick="pedal()" alt="tekst til pedaler">
+                    <area shape="rext" coords="140,54, 300,120" onclick="stel()" alt="tekst til stel">
+                </map>
+
+        <div class="infographicText"><p id="teasere">Klik på billedet og læs mere om den del, optimeret til width 412px.</p></div>
+
+
            
     
     </article>
@@ -63,7 +73,24 @@
 <!-- værksted reklame søjle med responsive billede størrelse.-->
 
 
+<article class="vaerksted">
 
+   <a href=""> <div class="vaerkstedTekst"> <h3> Book tid på værksted </h3> </div></a>
+</article>
+
+<div class="ekstra">
+    <article class="ekstraOverskrift">
+        <h2> Ekstra udstyr til alle ture </h2>
+    </article>
+
+    <picture>
+
+    </picture>
+    <div class="ekstrah3">
+        Mærke
+    </div>
+
+</div>
 
     
 
