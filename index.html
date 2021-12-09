@@ -7,8 +7,10 @@
 	<meta name="description" content="Denmarks største udvalg i alt inden for cykler og elcykler.">
 	<meta name="keywords" content="Cykler, MTB, Danmarks største udvalg, Aarhus største udvalg, Elcykler, cykel-udstyr, cykelsko">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
+	<link rel="stylesheet" href="css/nav.css"> <!-- nav CSS-->
+    <link rel="stylesheet" href="css/style.css"> <!-- Index CSS -->
+    <link rel="stylesheet" href="css/footer.css"> <!-- Footer CSS-->
+    <script src="JS/script.js"></script>
 
 	<!-- favicon = ikon i faneblad / browser -->
 	<link rel="icon" type="image/x-icon" href="img/..." />
@@ -49,12 +51,11 @@
             1-2 dages levering
         </span>
     </div>
-
     <article class="infographic"> <!--Infographic-->
          <!-- her skal infographic respnsiv på størrelse -->
-
+         
                 <img src="img/foto/infographic.jpg" alt="Få hjælp til at vælge din næste cykel. få alt information om dele på en MTB lige her. " usemap="#MTB" width="100vw" height="100%" class="infographicPic">
-
+            
                 <map name="MTB">
                     <area shape="rect" coords="125,0, 200,50" onclick="sadle()" alt="tekst til sadlen">
                     <area shape="rect" coords="250,90 310,130" onclick="bremser()" alt="tekst til styret">
@@ -63,7 +64,7 @@
                     <area shape="rext" coords="140,54, 300,120" onclick="stel()" alt="tekst til stel">
                 </map>
 
-        <div class="infographicText"><p id="teasere">Klik på billedet og læs mere om den del, optimeret til width 412px.</p></div>
+        <div class="infographicText"><p id="teasere">Klik på billedet og læs mere om den del <br> optimeret til width 412px.</p></div>
 
 
            
@@ -71,8 +72,6 @@
     </article>
 
 <!-- værksted reklame søjle med responsive billede størrelse.-->
-
-
 <article class="vaerksted">
 
    <a href=""> <div class="vaerkstedTekst"> <h3> Book tid på værksted </h3> </div></a>
@@ -82,17 +81,84 @@
     <article class="ekstraOverskrift">
         <h2> Ekstra udstyr til alle ture </h2>
     </article>
-
+    <section class="ekstraCard">
     <picture>
-
+        <img id="produktSko" src="img/foto/produkt/sko500.jpg" alt="Se vores store udvalg af cykelsko, vi har flere 100vis af sko.">
     </picture>
-    <div class="ekstrah3">
-        Mærke
-    </div>
+   
+        <h3> Mærker</h3>
+    </section>
 
 </div>
 
-    
+<article class="info-box">
+<div class="dotsleft">
+    <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+    <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+    <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+</div>  
+    <section class="info-box-tekst">  
+        <h2>Hurtig levering </h2>
+        <h3>1-3 hverdage*</h3>
+        <h2>Fortrydelsesret</h2>
+        <h3>30 dage</h3>
+        <h2>Shimano service center</h2>
+        <h3>Professionelt værksted</h3>
+        <h2>Sikkerhed</h2>
+        <h3>100% Sikker betaling</h3>
+
+<div class="dotsright">
+    <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+    <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+    <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+</div>     
+</section>
+</article>
+ 
+
+<footer class="footerbox">
+    <section class="logofooter">
+        <img id="logoFooter" src="img/ikoner/JensenLogo.svg" alt="Jensen cykler logo bund">
+    </section>
+
+    <aside class="jensenInfo">
+        <address>
+            Jensen Cykler <br>
+            Vestre ringgade 27-29 <br>
+            8000 Aarhus C. <br>  </address>
+            Telefon:<a href="tel:+458615599">8615599</a> <br>
+            <a href="mailto:Info@Jensencykler.com">Info@Jensencykler.com</a><br>
+            <a href="mailto:Webshop@Jensencykler.com">Webshop@Jensencykler.com</a><br>
+            CVR: 34021155
+    </aside>
+
+    <aside class="jensenlinks">
+        <h3>Generel</h3>
+        <a href="#">Åbningstider</a> <br>
+        <a href="#">Kontakt</a> <br>
+        <a href="#">Handelsbetingelser</a> <br>
+        <a href="#">Leveringsbetingelser</a> <br>
+        <a href="#">Log ind</a> <br>
+    </aside>
+
+    <aside class="jensenHvorfor">
+        <h3>Hvorfor os?</h3>
+        <a href="#">Hvem er vi?</a> <br>
+        <a href="#">Shimano service center</a> <br>
+        <a href="#">Vores mærke</a> <br>
+    </aside>
+
+    <aside class="Some">
+        <h3>Sociale medier</h3>
+        <a href="#">Instagram</a> <br>
+        <a href="#">Facebook</a> <br>
+        <a href="#">Youtube</a> <br>
+    </aside>
+
+    <section class="rights">
+        <p>© 2021 MSFHdesign. All Rights Reserved.</p>
+    </section>
+</footer>
 
 </body>
 </html>

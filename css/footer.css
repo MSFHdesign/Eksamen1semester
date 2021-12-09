@@ -1,0 +1,30 @@
+.footerbox {
+    display: grid;
+    grid-template-areas: 
+    "logo"
+    "info"
+    "generel"
+    "links"
+    "os"
+    "some";
+    text-align: center;
+    background-color: white;
+    color: var(--blaa);
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .footerbox a {
+    color: var(--blaa);
+    text-decoration: none;
+  }
+  
+  #logoFooter{
+    margin:0.5em;
+    width: 90%;
+  }
+  
+  .rights{
+    color: white;
+    background-color: var(--blaa)
+  }
