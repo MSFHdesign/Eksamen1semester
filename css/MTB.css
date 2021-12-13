@@ -26,8 +26,8 @@
       "footer";     
 }
 .navbar {
-    position:sticky;
-    top: 55vh;
+    position: -webkit-sticky;
+    position: sticky; top: 0;
 }
 
 .bigpic{
@@ -45,52 +45,118 @@
     z-index: 100;
     grid-area: logo;
       margin-top: 0.5em;
-      margin-left: 0.5em;
-      width: 98%;
+      margin-left: 1.5em;
+      width: 90%;
   }
   
   #logoTop{
-      width: 90%;
+      width: 80%;
       height: 70%;
   }
   
   #MTBpic {
-      width: 60%;
+      width: 50%;
       
   }
 /* Uanset behov, så har vi cyklen ansnit starter her  */
 .shop{
-    grid-area: shop;
+    margin: 0;
+    position: relative;
+    top: 0;
 }
 .Shop h2 {
+    margin-top: 0;
     text-align: center;
     background-color: var(--blaa);
     color: white;
     padding: 0.4em 0 0.4em 0;
+    font-size: 20px;
+}
+
+#teaser {
+    z-index: 100;
+    text-align: center;
+    background-color: var(--blaa);
+    color: white;
+    padding: 0.4em 0 0.4em 0;
+    font-size: 20px;
+    position: relative;
+    top: 50%;
+}
+
+#shopPic {
+    position: relative;
+    margin-top: -5em;
+    width: 100%;
 }
 
 
-
 /* guide til køb af cykel */
+.guidetilcykel{
+    text-align: center;
+    justify-content: center;
+    width: 99%;
+    border: 1px solid red;
+}
+#guidebox{
+    width: 100%;
+}
 
 
+.output {
+    color: var(--blaa);
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+#q1{
+    display: none;
+}
+
+#q2{
+    display: none;
+}
+
+#q3{
+    display: none;
+}
+
+#q4{
+    display: none;
+}
+#q4pic{
+    
+    width: 100%;
+    height: auto;
+}
 
 /* Slider starter her */
 
   .container{ 
+      cursor: pointer;
       grid-area: MTBtur;
       box-sizing: border-box;
     width: 100vmin;
     position: relative;
     overflow:hidden;
-
-  
   }
   
+  .container h2{
+    z-index: 100;
+    text-align: center;
+    background-color: var(--blaa);
+    color: white;
+    padding: 0.4em 0 0.4em 0;
+    font-size: 20px;
+    position: relative;
+    top: 80%;
+
+  }
+
   .sliderTilTyper{
     width: 100%;
     display: flex;
-    animation: slide 8s infinite; /* der bruges animation slide for at skifte billderne, men tidsinterval, uendeligt looping.  */
+    animation: slide 10s infinite; /* der bruges animation slide for at skifte billderne, men tidsinterval, uendeligt looping.  */
   }
   
   .sliderTilTyper img{
@@ -122,4 +188,12 @@
     100%{
       transform: translateX(-300%);
     }
+  }
+
+
+
+  /* Kort til næste tur */
+
+  .korttiltur{
+      text-align: center;
   }
