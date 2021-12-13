@@ -1,0 +1,53 @@
+
+.wrapper{
+    padding: 0;
+    overflow-x: hidden;
+    margin: 0; /* Således går alt content het ud som standart, margin indstilles individuelt. */
+    display: grid;
+    background-color: var(--graa);
+    grid-template-areas:
+      "logo"
+      "nav"
+      "1"
+      "2"
+      "3"
+      "4"
+      "footer";     
+}
+.artikel{
+    background: var(--graa);
+}
+
+.artikelOS {
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    background: var(--blaa);
+    padding: 1%;
+    margin: 1em 0 0 0;
+}
+
+.artikelP{
+    margin: 0 0.5em 0 0.5em;
+    font-size: 20px;
+}
+
+.artikler img{
+    width: 100%;
+    height: auto;
+}
+#skov{
+    grid-area: 1;
+}
+
+#grus {
+    grid-area: 2;
+}
+
+#landeveje {
+    grid-area: 3;
+}
+
+#tracks {
+    grid-area: 4;
+}

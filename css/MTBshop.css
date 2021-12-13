@@ -1,0 +1,14 @@
+
+.wrapper{
+    padding: 0;
+    overflow-x: hidden;
+    margin: 0; /* Således går alt content het ud som standart, margin indstilles individuelt. */
+    display: grid;
+    background-color: var(--graa);
+    grid-template-areas:
+      "logo"
+      "nav"
+      "teas"
+      "footer"
+  ; 
+}

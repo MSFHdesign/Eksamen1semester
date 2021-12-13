@@ -1,0 +1,41 @@
+:root {
+    /* farver */
+    --blaa: #080332;
+    --graa: #f2f2f2;
+    --hvid: #ffffff;
+    --sort: #000000;
+    --groen: #128F01;
+    --transparent: 0.70;
+    --margin: 1em;
+}
+.navbar {
+    position: -webkit-sticky;
+     position: sticky; top: 0;
+}
+
+.bigpic{
+    position: relative;
+    background: url('../img/foto/bigpic6-500.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        background-attachment:scroll;
+    width: 100vw;
+    height: 50vh;
+}
+.top{ 
+    position: absolute;
+    z-index: 100;
+    grid-area: logo;
+      margin-top: 0.5em;
+      margin-left: 1.5em;
+      width: 90%;
+  }
+  
+  #logoTop{
+      width: 80%;
+      height: 70%;
+  }
+  
+  #MTBpic {
+      width: 50%; }

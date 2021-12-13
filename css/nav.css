@@ -9,29 +9,12 @@
     --margin: 1em;
 
 }
-.wrapper{
-    margin: 0; /* Således går alt content het ud som standart, margin indstilles individuelt. */
-    display: grid;
-    background-color: var(--graa);
-    grid-template-areas:
-      "logo"
-      "nav"
-      "infobox"
-      "infographic"
-      "shop"
-      "ekstra"
-      "cardflex"
-      "footer";     
-}
-
-
 ul.menu{ 
     display: none}
 
 .navbar {
     background-color: rgb(255, 255, 255);
     position: sticky;
-    padding: 1em;
     top: 0px;
     grid-area: nav;
     display: grid; /* der bruges nested-grid istedet for flexbox da afstanden er forskellig. */
@@ -154,7 +137,7 @@ burger ikonet */
   }
 
       input[type=text] {
-        width:4.5em;
+        width:8em;
         height: 1.5em;
         box-sizing: border-box;
         border: 1px solid #ccc;
@@ -166,10 +149,7 @@ burger ikonet */
           background-position: left;
           background-repeat: no-repeat;
   }
-      input[type=text]:hover {
-        width: 8em;
-        cursor:help;
-      }
+
 
 /* Usynlig knap for at toggle nav-bar ind og ud. den placeres langt ude af VH */
 .knap2 { 
@@ -181,7 +161,6 @@ burger ikonet */
 #kurv {
   grid-area: ikon;
   width: 50%;
-  margin: 0.2em;
 }
 
 
