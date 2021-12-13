@@ -14,18 +14,20 @@
   
   
   }
-.wrapper{
-    margin: 0; /* Således går alt content het ud som standart, margin indstalleres individuelt. */
+  .wrapper{
+    margin: 0; /* Således går alt content het ud som standart, margin indstilles individuelt. */
     display: grid;
     background-color: var(--graa);
     grid-template-areas:
       "logo"
       "nav"
+      "infobox"
       "infographic"
+      "shop"
+      "ekstra"
       "cardflex"
-      "footer";
+      "footer";     
 }
-
 a {
   text-decoration: none;
 }
@@ -45,8 +47,10 @@ a {
 
 /* Infomations box flex starter her */
 .infobox{
+  grid-area: infobox;
     width: 100%;
     display: flex; /* der bruges flexbox her, da hver kasse skal have den samme størrelse og mellemrum. */
+      justify-content: space-evenly;
     background-color: var(--blaa);
     color: white;
 }
@@ -59,16 +63,16 @@ a {
 
 
 .infographic{
-  overflow-x: hidden;
+grid-area: infographic;
   display: grid;
-  grid-template-areas:
-  "pic"
-  "text";
+    justify-items: center;
+    grid-template-areas:
+      "pic"
+     "text";
 }
 
 .infographicPic {
   grid-area: pic;
-  width: 100vw;
 }
 
 .infographicText {
@@ -83,6 +87,7 @@ a {
 }
 
 #teasere {
+  grid-area: cardflex;
   font-size: 1em ;
   margin: 0.5em;
   color: white;
@@ -95,14 +100,15 @@ a {
 }  
 
 .vaerksted{
+  grid-area: shop;
   border: 1px solid black;
   display: flex;
     flex-direction: column;
     justify-content: center;
   width: 100vw;
   background-image: url('../img/foto/vaerksted500.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
   height: 100px;
 }
 
@@ -116,7 +122,8 @@ a {
   color: white;
 }
 .info-box{
- width: 100%;
+  Grid-area: cardflex;
+  width: 100%;
     background-color: var(--blaa);
     color: white;
   }
@@ -130,13 +137,57 @@ a {
 }
 
 .ekstra {
+  overflow-x: scroll;
+  grid-area: ekstra;
   text-align: center;
-
 }
 
-#produktSko{
-  width: 90vw
+.overskrift {
+  color: var(--blaa);
+  margin-top: 1em;
+  text-shadow: 1px 1px 1px rgb(255, 255, 255);
+  display: flex;
+    justify-content: center;
 }
+
+.overskrift h2 {
+  color: var(--lihover);
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+
+.flexartikel {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  text-align: center;
+  overflow-x: scroll;
+  padding-bottom: 1em;
+
+
+  }
+
+  .cardteasere {
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    border: 1px transparent;
+    min-width: 250px;
+    height: auto;
+  
+  }
+
+  .teasereimg {
+    grid-area: pic;
+    max-width:100%;
+    height: auto;
+
+
+  }
+
+
+
 
 .dotsleft{
   margin: 0.5em;
@@ -149,9 +200,8 @@ a {
 
 .dotsright{
   margin: 0.5em;
-  position: absolute;
-  right: 0;
-  bottom: -24em;
+  position: relative;
+  left: 87%;
   display: flex;
     flex-direction: row;
     flex-wrap:wrap;

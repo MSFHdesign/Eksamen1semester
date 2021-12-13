@@ -1,0 +1,125 @@
+:root {
+    /* farver */
+    --blaa: #080332;
+    --graa: #f2f2f2;
+    --hvid: #ffffff;
+    --sort: #000000;
+    --groen: #128F01;
+    --transparent: 0.70;
+    --margin: 1em;
+}
+
+
+.wrapper{
+    padding: 0;
+    overflow-x: hidden;
+    margin: 0; /* Således går alt content het ud som standart, margin indstilles individuelt. */
+    display: grid;
+    background-color: var(--graa);
+    grid-template-areas:
+      "logo"
+      "nav"
+      "shop"
+      "guide"
+      "MTBtur"
+      "cardflex"
+      "footer";     
+}
+.navbar {
+    position:sticky;
+    top: 55vh;
+}
+
+.bigpic{
+    background: url('../img/foto/bigpic6-500.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment:scroll;
+    width: 100vw;
+    height: 50vh;
+
+}
+.top{ 
+    position: absolute;
+        top: 2em;
+    z-index: 100;
+    grid-area: logo;
+      margin-top: 0.5em;
+      margin-left: 0.5em;
+      width: 98%;
+  }
+  
+  #logoTop{
+      width: 90%;
+      height: 70%;
+  }
+  
+  #MTBpic {
+      width: 60%;
+      
+  }
+/* Uanset behov, så har vi cyklen ansnit starter her  */
+.shop{
+    grid-area: shop;
+}
+.Shop h2 {
+    text-align: center;
+    background-color: var(--blaa);
+    color: white;
+    padding: 0.4em 0 0.4em 0;
+}
+
+
+
+/* guide til køb af cykel */
+
+
+
+/* Slider starter her */
+
+  .container{ 
+      grid-area: MTBtur;
+      box-sizing: border-box;
+    width: 100vmin;
+    position: relative;
+    overflow:hidden;
+
+  
+  }
+  
+  .sliderTilTyper{
+    width: 100%;
+    display: flex;
+    animation: slide 8s infinite; /* der bruges animation slide for at skifte billderne, men tidsinterval, uendeligt looping.  */
+  }
+  
+  .sliderTilTyper img{
+    width: 100%;
+  }
+  /* tids intervallet er opdelt i 8 så hver billede får lige lang tid. */
+  @keyframes slide{ /* keyframes til animation */
+    0%{
+      transform: translateX(0%);
+    }
+    25%{
+      transform: translateX(0%);
+    }
+    30%{
+      transform: translateX(-100%);
+    }
+    50%{
+        transform: translateX(-100%);
+      }
+    55% {
+      transform: translateX(-200%);
+    }
+    75% {
+      transform: translateX(-200%);
+    }
+    80% {
+      transform: translateX(-300%);
+    }
+    100%{
+      transform: translateX(-300%);
+    }
+  }

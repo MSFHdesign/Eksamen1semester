@@ -1,7 +1,38 @@
+:root {
+    /* farver */
+    --blaa: #080332;
+    --graa: #f2f2f2;
+    --hvid: #ffffff;
+    --sort: #000000;
+    --groen: #128F01;
+    --transparent: 0.70;
+    --margin: 1em;
+
+}
+.wrapper{
+    margin: 0; /* Således går alt content het ud som standart, margin indstilles individuelt. */
+    display: grid;
+    background-color: var(--graa);
+    grid-template-areas:
+      "logo"
+      "nav"
+      "infobox"
+      "infographic"
+      "shop"
+      "ekstra"
+      "cardflex"
+      "footer";     
+}
+
+
+ul.menu{ 
+    display: none}
+
 .navbar {
     background-color: rgb(255, 255, 255);
     position: sticky;
-    top: 0;
+    padding: 1em;
+    top: 0px;
     grid-area: nav;
     display: grid; /* der bruges nested-grid istedet for flexbox da afstanden er forskellig. */
       align-items: center;
@@ -13,7 +44,8 @@
 }
 
 .burger {
-    margin-left: 0.2em;
+    margin: 0.2em;
+    padding: 0.2em;
     grid-area: burger;
     font-size: 1.5em;
     color: var(--blaa);
@@ -23,6 +55,98 @@
     position: absolute;
  }
 
+/* burger dropdown knap
+
+burger ikonet */
+  
+  /* navbar -  boks */
+  .navibar {
+    display: none;
+    flex-direction: column;
+    margin: 34px 0 0 0;
+    background-color: var(--blaa);
+    height: auto;
+    width: 96vw;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    position: absolute;
+    top:0;
+    left:0;
+  }
+  
+  
+  /* Usynlig knap */
+  .knap2 {
+      position: absolute;
+      top: -9000px;
+  }
+  
+  .knap2:checked ~ .navibar {
+    display: block;
+  
+  }
+  
+  /* box - content */
+  
+  
+  /* søge funktion */
+  input[type=text] {
+    margin: 0.4em 0.2em 0.2em 2.3em;
+    width:4.5em;
+    height: 1em;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    padding: 10px 5px 10px 25px;
+      }
+  
+  
+  /* dropdownmenubar */
+  [class^="mere"] {
+      display: none;
+      background: #f1f2f2;
+    }
+  
+  [class^="vismere"] {
+    display:block;
+    position: relative;
+    
+    }
+  
+  [class^="vis"] {
+      position: absolute;
+      top: -9000px;
+  }
+  
+  [class^="vis"]:checked ~ [class^="mere"] {
+    display: block;
+  
+  }
+  
+  
+  /* dropdown layout */
+  .navibar h3 {
+    color: white;
+    margin: 0.2em 0 0.2em 2em;
+  }
+  .navibar li {
+    list-style-type: none;
+    padding: 0.2em;
+    
+  }
+  .navibar a {
+    object-fit: contain;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .navibar a:hover{
+    background: gray;
+  }
+  
+
+
+ 
  .search { 
    grid-area: search;
     margin-right: 4px;
@@ -62,3 +186,76 @@
 
 
 /* Nav slutter her */
+
+
+
+@media screen and (min-width: 800px) {
+.burger {display: none}
+
+ul.menu{
+    grid-area: nav;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    width: 100%;
+  
+  
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  
+  .menu li {
+    color: #82171e;
+    background: inherit;
+    display: block;
+    float: left;
+    padding: 1em; /* Test på siden */
+    position: relative;
+    text-decoration: none;
+  
+  }
+  
+  
+  .menu li a {
+    margin-top: 0.5em;
+    font-size: 30px;
+    color: #82171e;
+  }
+  
+  .menu li:hover {
+    background: white;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    background: white;
+    visibility: hidden;
+    opacity: 0;
+    min-width: 5rem;
+    position: absolute;
+    transition: all 0.5s ease;
+    left: 0;
+    display: none;
+  }
+  
+  .menuitem:hover > ul,
+  .menuiten:focus-within > ul
+  .dropdown:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+  }
+  
+  .menu li ul li {
+    clear: both;
+    width: 100%;
+  }
+
+
+}

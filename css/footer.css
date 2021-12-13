@@ -1,4 +1,10 @@
+
+footer h3{
+    margin-bottom: 0.0em;
+    text-decoration: underline;
+}
 .footerbox {
+    grid-area: footer;
     display: grid;
     grid-template-areas: 
     "logo"
@@ -17,6 +23,7 @@
   .footerbox a {
     color: var(--blaa);
     text-decoration: none;
+    font-style: italic;
   }
   
   #logoFooter{
@@ -28,3 +35,18 @@
     color: white;
     background-color: var(--blaa)
   }
+
+
+
+
+
+@media screen and (min-width: 1200px) {
+    .footerbox {
+        grid-area: footer;
+        display: grid;
+            grid-template-areas: 
+                "logo logo logo logo logo"
+                "info generel links os some"
+                "rights rights rights rights rights";
+    }    
+}
