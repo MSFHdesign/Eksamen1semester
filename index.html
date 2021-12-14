@@ -29,7 +29,7 @@
   </form>
 
 <!-- Kurv -->
-   <img src="img/ikoner/kurv.svg" alt="Jensen cykler indkøbskurv" id="kurv">
+  <img src="img/ikoner/kurv.svg" alt="Jensen cykler indkøbskurv" id="kurv">
 
 <div class="burger">
     <input id="dropdown" class="knap2" type="checkbox">
@@ -185,11 +185,12 @@
         <li><a class="sub" href="MTBtur.html">Kørelse på MTB</a></li>
         <li><a class="sub" href="MTBinfo.html">Kend din MTB</a></li>
         <li><a class="sub" href="Guide.html">Guide til køb</a></li>
+ 
   </ul>
 
 
 
-</nav> 
+</nav> <!-- NAV SLUTTER -->
 
 
 
@@ -207,18 +208,67 @@
     <article class="infographic"> <!--Infographic-->
          <!-- her skal infographic respnsiv på størrelse -->
         <picture>
-                <img src="img/foto/infographic.jpg" alt="Få hjælp til at vælge din næste cykel. få alt information om dele på en MTB lige her. " usemap="#MTBmobil" width="412" height="100%" class="infographicPic" id="Mobil">
+          <div class="mobilmap">
+                <img src="img/foto/infographic412.jpg" alt="Få hjælp til at vælge din næste cykel. få alt information om dele på en MTB lige her. " usemap="#MTBmobil" width="412" height="100%" class="infographicPic" id="Mobil">
             
                 <map name="MTBmobil">
-                    <area shape="rect" coords="125,0, 200,50" onclick="sadle()" alt="tekst til sadlen">
-                    <area shape="rect" coords="250,90 310,130" onclick="bremser()" alt="tekst til styret">
-                    <area shape="rect" coords="40,40, 110,140" onclick="gear()" alt="tekst til gear">
-                    <area shape="rect" coords="140,180, 220,160" onclick="pedal()" alt="tekst til pedaler">
-                    <area shape="rext" coords="140,54, 300,120" onclick="stel()" alt="tekst til stel">
+                    <area shape="rect" coords="111,0, 194,50" onclick="sadle()" alt="tekst til sadlen">
+                    <area shape="rect" coords="207,0 308,59" onclick="bremser()" alt="tekst til styret">
+                    <area shape="rect" coords="0,40, 120,194" onclick="gear()" alt="tekst til gear">
+                    <area shape="rect" coords="125,129, 212,188" onclick="pedal()" alt="tekst til pedaler">
+                    <area shape="rext" coords="139,55, 244,127" onclick="stel()" alt="tekst til stel">
+                    <area shape="rect" coords="252,59, 299,117" onclick="suspension()" alt="tekst til suspension">
+                    <area shape="rect" coords="233,127, 388,279" onclick="daek()" alt="tekst til dæk">
+                    <area shape="rect" coords="0,197, 223,291" onclick="tomspace()" alt="tomt space i venstre bund">
+                    <area shape="rect" coords="0,0, 124,49" onclick="tomspace()" alt="tomspace i venstre top">
+                    <area shape="rect" coords="306,0, 410,99" onclick="tomspace()" alt="tomspace højere top">
                 </map>
+        
+              </div>
          </picture>
-        <div class="infographicText"><p id="teasere">Klik på billedet og læs mere om den del <br> optimeret til width 412px.</p></div>
+        
+         <picture>
+          <div class="tablet-map">
+                <img src="img/foto/infographic900.jpg" alt="Få hjælp til at vælge din næste cykel. få alt information om dele på en MTB lige her. " usemap="#MTBtablet" width="900" height="100%" class="infographicPic" id="tablet">
+            
+                <map name="MTBtablet">
+                    <area shape="rect" coords="266,35, 409,133" onclick="sadle()" alt="tekst til sadlen">
+                    <area shape="rect" coords="462,8 700,119" onclick="bremser()" alt="tekst til styret">
+                    <area shape="rect" coords="0,150, 260,550" onclick="gear()" alt="tekst til gear">
+                    <area shape="rect" coords="277,286, 449,413" onclick="pedal()" alt="tekst til pedaler">
+                    <area shape="rext" coords="319,125, 533,269" onclick="stel()" alt="tekst til stel">
+                    <area shape="rect" coords="552,160, 665,272" onclick="suspension()" alt="tekst til suspension">
+                    <area shape="rect" coords="495,286, 864,592" onclick="daek()" alt="tekst til dæk">
+                    <area shape="rect" coords="0,424, 489,639" onclick="tomspace()" alt="tomt space i venstre bund">
+                    <area shape="rect" coords="0,0, 277,109" onclick="tomspace()" alt="tomspace i venstre top">
+                    <area shape="rect" coords="695,0, 899,216" onclick="tomspace()" alt="tomspace højere top">
+                </map>
 
+              </div>
+         </picture>
+
+         <picture>
+          <div class="widescreen-map">
+                <img src="img/foto/infographic1200.jpg" alt="Få hjælp til at vælge din næste cykel. få alt information om dele på en MTB lige her. " usemap="#MTBwidescreen" width="1200px" height="100%" class="infographicPic" id="widescreen">
+            
+                <map name="MTBwidescreen">
+                    <area shape="rect" coords="365,50, 543,159" onclick="sadle()" alt="tekst til sadlen">
+                    <area shape="rect" coords="628,15 940,158" onclick="bremser()" alt="tekst til styret">
+                    <area shape="rect" coords="119,248, 314,498" onclick="gear()" alt="tekst til gear">
+                    <area shape="rect" coords="378,377, 581,543" onclick="pedal()" alt="tekst til pedaler">
+                    <area shape="rext" coords="478,154, 764,289" onclick="stel()" alt="tekst til stel">
+                    <area shape="rect" coords="736,210, 887,376" onclick="suspension()" alt="tekst til suspension">
+                    <area shape="rect" coords="671,386, 1101,791" onclick="daek()" alt="tekst til dæk">
+                    <area shape="rect" coords="0,573, 655,859" onclick="tomspace()" alt="tomt space i venstre bund">
+                    <area shape="rect" coords="0,0, 368,146" onclick="tomspace()" alt="tomspace i venstre top">
+                    <area shape="rect" coords="914,0, 1200,301" onclick="tomspace()" alt="tomspace højere top">
+                </map>
+              </div>
+         </picture>
+
+
+        <div class="infographicText"><p id="teasere">Klik på billedet og læs mere om den del </p></div>
+      
 
            
     
@@ -268,7 +318,7 @@
  
 <footer class="footerbox">
     <section class="logofooter">
-        <img id="logoFooter" src="img/ikoner/JensenLogo.svg" alt="Jensen cykler logo bund">
+       <div class="logoFooter"> <img id="logoFooter" src="img/ikoner/JensenLogo.svg" alt="Jensen cykler logo bund"></div>
     </section>
 
     <aside class="jensenInfo">
@@ -309,6 +359,5 @@
         <p>© 2021 MSFHdesign. All Rights Reserved.</p>
     </section>
 </footer>
-
 </body>
 </html>

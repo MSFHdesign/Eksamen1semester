@@ -15,6 +15,7 @@
   
   }
   .wrapper{
+  
     margin: 0; /* Således går alt content het ud som standart, margin indstilles individuelt. */
     display: grid;
     background-color: var(--graa);
@@ -33,26 +34,29 @@ a {
 }
 
 .top{ 
+  display: flex;
+  justify-content: center;
   grid-area: logo;
     margin-top: 0.5em;
     width: 100%;
 }
 
 #logoTop{
-    width: 100%;
-    height: 70%;
+  width: 90vw;
 }
 
 
 
 /* Infomations box flex starter her */
 .infobox{
+  z-index: 5;
   grid-area: infobox;
     width: 100%;
     display: flex; /* der bruges flexbox her, da hver kasse skal have den samme størrelse og mellemrum. */
       justify-content: space-evenly;
     background-color: var(--blaa);
     color: white;
+    margin-bottom: 1em;
 }
 /* følgende kode tager alle id med navnet box og efterfølgende nummer. */
 [id^="box"] {
@@ -61,51 +65,68 @@ a {
 }
 
 
-
 .infographic{
-grid-area: infographic;
+  grid-area: infographic;
+  position: relative;
+  top:0;
   display: grid;
-    justify-items: center;
     grid-template-areas:
       "pic"
-     "text";
+     "tekst";
+     justify-items: center;
 }
 
 .infographicPic {
+  z-index: 0;
+  grid-area: pic;
+
+}
+
+.tablet-map {
+  display: none;
   grid-area: pic;
 }
 
+#tablet{
+  z-index: 0;
+  width: 900px
+}
+.widescreen-map {
+  display: none;
+  grid-area: pic;
+ 
+
+}
+
 .infographicText {
-  grid-area: text;
+  margin-top: -2em;
+  grid-area: tekst;
   z-index: 3;
   width: 100%;
+  min-height: 150px;
   height: auto;
   background-color: var(--blaa);
   color: var(--white);
-  margin-top: -2em;
-  margin-bottom: 2em;
+
 }
 
 #teasere {
   grid-area: cardflex;
-  font-size: 1em ;
+  font-size: 1em;
   margin: 0.5em;
   color: white;
   text-align: center;
-  }
+}
 
-#teasere h3{
-  width: 25px;
-  text-align: center;
-}  
+
 
 .vaerksted{
   grid-area: shop;
-  border: 1px solid black;
   display: flex;
     flex-direction: column;
     justify-content: center;
-  width: 100vw;
+  width: calc(100% - 2px);
+  border: 1px solid black;
   background-image: url('../img/foto/vaerksted500.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -151,13 +172,15 @@ grid-area: infographic;
 }
 
 .overskrift h2 {
-  color: var(--lihover);
+  color: var(--blaa);
   margin-bottom: 0;
   margin-top: 0;
 }
 
+/* flex artiklen med produkter! */
 
 .flexartikel {
+  width: 100%;
   display: flex;
   justify-content: flex-start;
   align-content: center;
@@ -173,23 +196,19 @@ grid-area: infographic;
     align-content: center;
     text-align: center;
     border: 1px transparent;
-    min-width: 250px;
+    min-width: 500px;
     height: auto;
   
   }
 
   .teasereimg {
     grid-area: pic;
-    max-width:100%;
+    max-width: 500px;
     height: auto;
-
-
   }
-
-
-
-
 .dotsleft{
+  top: 0;
+  left: 0;
   margin: 0.5em;
   position: relative;
   display: flex;
@@ -201,7 +220,7 @@ grid-area: infographic;
 .dotsright{
   margin: 0.5em;
   position: relative;
-  left: 87%;
+  left: calc(100% - 4em);
   display: flex;
     flex-direction: row;
     flex-wrap:wrap;
@@ -217,3 +236,70 @@ grid-area: infographic;
   display: inline-block;
 }
 
+@media screen and (min-width: 500px){
+  .vaerksted{
+    background-image: url('../img/foto/produkt/vaerksted700.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+    height: 150px;
+  }
+
+}
+
+@media screen and (min-width: 700px) {
+  .vaerksted{
+    background-image: url('../img/foto/produkt/vaerksted900.jpg');}
+
+}
+
+
+
+ /* tablet */
+@media screen and (min-width: 900px) {
+ 
+
+  .mobilmap{
+    display: none;
+  }
+
+  .tablet-map {
+    display: block;
+    grid-area: pic;
+  }
+ 
+
+  .infobox {
+    font-size: 35px;
+  }
+
+  .infographicText{
+    margin: 0;
+    font-size: 30px;
+    grid-area: tekst;
+
+  }
+ 
+  .vaerksted{
+    margin-top: 2em;
+    height: 200px;
+   background-image:  url('../img/foto/produkt/vaerksted1200.jpg');;
+  }
+
+  
+}
+
+@media screen and (min-width: 1200px) {
+.widescreen-map {
+  display: grid;
+  grid-template-areas:
+    "pic"
+   "tekst";
+}
+
+.tablet-map {
+  display: none;
+}
+.widescreen-map {
+  display: block}
+
+}

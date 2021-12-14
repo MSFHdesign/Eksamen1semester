@@ -10,7 +10,7 @@
 }
 .navbar {
     position: -webkit-sticky;
-     position: sticky; top: 0;
+     position: sticky; top: 0
 }
 
 .bigpic{
@@ -27,7 +27,7 @@
     position: absolute;
     z-index: 100;
     grid-area: logo;
-      margin-top: 0.5em;
+      margin-top: 0.3em;
       margin-left: 1.5em;
       width: 90%;
   }
@@ -39,3 +39,42 @@
   
   #MTBpic {
       width: 50%; }
+
+   
+  @media screen and (min-width: 700px){
+.bigpic{    
+    position: relative;
+    background: url('../img/foto/bigpic6-1000.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        background-attachment:scroll;
+    width: 100vw;
+    height: 100vh;
+
+}
+#logoTop{
+    width: 99%;
+    height: auto;
+}
+
+#MTBpic {
+    width: 63%; }
+
+
+
+  } /* slut for 900px width*/
+
+  @media screen and (min-width: 1000px){
+    .bigpic{    
+        position: relative;
+        background: url('../img/foto/bigpic6-1000.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top;
+            background-attachment:scroll;
+        width: 100vw;
+        height: 100vh;
+    }
+
+  }

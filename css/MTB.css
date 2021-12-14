@@ -54,11 +54,13 @@
     top: 60%;
 }
 #teaser a{
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
+
 }
 
 #shopPic {
+  z-index: 0;
     position: relative;
     margin-top: -5em;
     width: 100%;
@@ -85,9 +87,9 @@
 }
 
 .guidetilcykel button{
-    border: 3px solid white;
+    border: 0.2rem solid white;
     border-radius: 10px;
-    padding: 0.5em;
+    padding: 1.5rem;
     color: white;
     background: none;
 }
@@ -134,14 +136,13 @@
 #q4 h2 {
     text-decoration: underline;
     font-size: 30px;
-    margin-bottom: -15px;
 }
 #q4 h4{
     margin-bottom: -20px;
 }
 
 #ctaPris{
-    color: var(--groen);
+    color: var(--graa);
     text-decoration: underline;
     font-weight: bold;
     margin-top: -15px;
@@ -160,17 +161,22 @@
       cursor: pointer;
       grid-area: MTBtur;
       box-sizing: border-box;
-    width: 100vmin;
+    width: 100%;
+
     height: auto;
     position: relative;
     overflow: hidden;
 
+  }
+  #guidetrack{
+    font-size: 2rem;
   }
 
   
   .container h2{
     z-index: 100;
     text-align: center;
+    width: 100%;
     background-color: var(--blaa);
     color: white;
     padding: 0.4em 0 0.4em 0;
@@ -183,6 +189,14 @@
     color: white;
 }
 
+#tabletPic {
+  display: none;
+}
+
+#widePic{
+  display: none;
+}
+
   .sliderTilTyper{
     width: 100%;
     display: flex;
@@ -191,7 +205,7 @@
   
   .sliderTilTyper img{
     width: 100%;
-  }
+ }
   /* tids intervallet er opdelt i 8 så hver billede får lige lang tid. */
   @keyframes slide{ /* keyframes til animation */
     0%{
@@ -227,4 +241,69 @@
   .korttiltur{
       grid-area: cardflex;
       text-align: center;
+  }
+  @media screen and (min-width: 500px){
+    #mobilPic {
+      display:none;
+    }
+    #tabletPic {
+      display:contents
+    }
+
+  }
+
+
+  @media screen and (min-width: 900px){
+
+    #tabletPic {
+      display:none;
+    }
+
+    #widePic{
+      display: contents;
+    }
+
+    .Shop h2{
+      font-size: 3em;
+      z-index: 10;
+    }
+
+    #shopPic {
+    margin-top: -10em;
+    width: 100%;
+} 
+
+
+#teaser {
+  height: auto;
+  font-size: 2.5em;
+
+}
+
+/* guide til køb af cykel */
+.guidetilcykel{
+  min-height: 50vh;
+}
+
+.guidetilcykel button{
+  border: 3px solid white;
+  border-radius: 10px;
+  padding: 1em 4em;
+  color: white;
+  background: none;
+}
+
+.guidetilcykel h2{
+  font-size: 3em;
+  margin: 0.5em;
+}
+
+#minS{
+  font-size: 1.5rem;
+}
+
+.guidetilcykel h3{
+  font-size: 2em;
+  margin: 0.5em;
+}
   }

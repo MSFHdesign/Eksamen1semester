@@ -2,15 +2,17 @@
 <html lang="da">
 <head> <!-- hjernen bag siden. -->
 	<meta charset="utf-8">
-	<title>Jensen cykler - Aarhus' største udvalg af cykler og el-cykler</title>
+	<title>Jensen cykler - Aarhus' største udvalg i MTB</title>
 	<meta name="author" content="Michael Hovgaard">
 	<meta name="description" content="Denmarks største udvalg i alt inden for cykler og elcykler.">
 	<meta name="keywords" content="Cykler, MTB, Danmarks største udvalg, Aarhus største udvalg, Elcykler, cykel-udstyr, cykelsko">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/nav.css"> <!-- nav CSS-->
-    <link rel="stylesheet" href="css/MTB.css"> <!-- Index CSS -->
+    <link rel="stylesheet" href="css/MTB.css"> <!--content CSS-->
+	<link rel="stylesheet" href="css/MTBheader.css"> <!--MTB header CSS-->
+
     <link rel="stylesheet" href="css/footer.css"> <!-- Footer CSS-->
-    <script src="JS/script.js"></script>
+    <script src="JS/MTB.js"></script>
 
 	<!-- favicon = ikon i faneblad / browser -->
 	<link rel="icon" type="image/x-icon" href="img/ikoner/x-icon.svg" />
@@ -20,9 +22,15 @@
 		<a href="http://www.jensen.msfh.dk"><img src="img/ikoner/JensenLogo.svg" alt="Jensens nye logo" id="logoTop"></a>
 		<img src="img/ikoner/MTB-logo1200.png" alt="MTB Logo, Jensencyklers MTB" id="MTBpic">
 		</header>
-	<div class="bigpic">
+	<div class="bigpic"></div>
 	<nav class=navbar>
-   
+   <!-- Søge funktion -->
+<form class="search">
+    <input type="text" name="search" placeholder="Søg">
+    </form>
+
+<!-- Kurv -->
+ <img src="img/ikoner/kurv.svg" alt="Jensen cykler indkøbskurv" id="kurv">
 <!--navigationsbar burger menu -->
 
 
@@ -180,50 +188,137 @@
         <li><a class="sub" href="MTBtur.html">Kørelse på MTB</a></li>
         <li><a class="sub" href="MTBinfo.html">Kend din MTB</a></li>
         <li><a class="sub" href="Guide.html">Guide til køb</a></li>
-  </ul>
-
-<!-- Søge funktion -->
-<form class="search">
-    <input type="text" name="search" placeholder="Søg">
-    </form>
-
-<!-- Kurv -->
-     <img src="img/ikoner/kurv.svg" alt="Jensen cykler indkøbskurv" id="kurv">
-
+      </ul>
 </nav> 
-</div>
+
+<!-- CONTENT starter her!!! -->
 
 <article class="Shop">
-	<h2>Uanset dit behov har vi cyklen der passer til.</h2>
-
+	<h2>Uanset dit behov har vi cyklen der passer </h2>
+	<h3 id="teaser"><a href="MTBshop.html">
+		Se vores store fulde sortiment af MTB</a>
+	</h3>
 	<picture>
-		<img src="" alt="Cykler">
+	<a href="MTBshop.html"><source srcset="img/foto/produkt/cykelshop-800px.jpg" media="(min-width: 500px)">
+    <source srcset="img/foto/produkt/cykelshop-1200px.jpg" media="(min-width: 1200px)" media="(min-width: 800px)">
+    <img src="img/foto/produkt/cykelshop-500px.jpg" alt="Se Jensens cyklers store udvalg af MTBs" id="shopPic"></a>
 	</picture>
 
-	<h3>
-		Se vores store fulde sortiment af MTB
-	</h3>
+
 </article>	
 
 
 <article class="guidetilcykel">
-	Svar på følgende spørgsmål så finder vi cyklen der passer til dig.
-</article>
+	<h2 id="OS">Er du i tvivl om din næste cykel?</h2>
 
-<article class="container">
-	<h2>Læs vores guide til tærren</h2>
-	<section class="sliderTilTyper">
+<section id="start">
+	<p id="minS">Følg vores guide så gør vi det nemt for dig med et personligt overblik over dine muligheder. <br><br></p> 
+   <button id="next" onclick="next()"> Start </button>
+
+</section>
+
+	<section id="budget">
+		<h3>Hvad er dit budget?</h3>
+		<input type="range" value="10000" min="1" max="65000" oninput="this.nextElementSibling.value = this.value"> 
+<output>10000</output> kr <br> <br>
+<button id="next1" onclick="next1()"> Næste </button>	
+	</section>
+<section id="q1">
+		<h3> Hvordan skal du bruge din MTB? </h3>
+<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+<label for="vehicle1"> Skov terræn</label> <br>
+<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+<label for="vehicle1"> Landevej</label> <br>
+<input type="checkbox" id="vehicle1" name="vehicle3" value="Bike">
+<label for="vehicle1"> Tracks</label> <br>
+<p> Hvordan du bruger din MTB har stor betydning. <br><a href="MTBinfo.html"> Læs her</a> </p> <br>
+<button id="next2" onclick="next2()"> Næste </button>
+		
+</section>
+
+<section id="q2">
+<h3>
+	Hvor høj er du?
+</h3>
+<label for="quantity">Cm: </label>
+<input type="number" id="quantity" name="quantity" min="1" max="230">
+<p> din højde er vigtig i forhold til at få det rigtige stel</p>
+<br>
+	<button id="next3" onclick="next3()"> Næste </button>
+</section>
+
+<section id="q3">
+	<h3> Har du brug for full suspension?</h3>
+	<input type="checkbox" id="susp1" name="susp1" value="susp">
+<label for="vehicle1"> Nej</label> <br>
+<input type="checkbox" id="susp1" name="susp1" value="susp">
+<label for="susp1"> Ja </label>
+	<p>Du bør altid læse vores artikel om suspension først <a href="MTBtur.html"> her</a></p>
+
+	<button id="next4" onclick="next4()">Bedste match </button>
+</section>
+
+<section id="q4">
+  <h2><em>Specialized</em> 29"</h2>
+	<picture>
+    <img src="img/foto/produkt/best-500px.jpg" alt="Bedste match til dig er" id="q4pic">
+    <source srcset="img/foto/produkt/best-800px.jpg" media="(min-width: 500px)">
+    <source srcset="img/foto/produkt/best-1000px.jpg" media="(min-width: 800px)">
+    <source srcset="img/foto/produkt/best-1200px.jpg" media="(min-width: 1000px)">
+</picture>
+	
+	
+	<h4>Shimano AXS 12 Speed</h4>
+	<h4>Hydralisk Disc</h4>
+	<h5>Fås i: Tint rød - carbon Spectra/flair</h5>
+
+	<h3 id="ctaPris"> 53.999,-</h3>
+	
+<a href="kurv.html"><div>
+<button class=”CTA”>Check ud</button>
+</div></a>
+</section>
+
+
+</article>
+<!-- mobil version -->
+<a href="MTBtur.html"><article class="container">
+		<h2 id="guidetrack"> <a href="MTBtur.html">Læs vores guide til tærren</a></h2>
+    <div id="mobilPic">
+  <section class="sliderTilTyper">
 <img src="img/foto/slider/slide1-500px.jpg" alt="Skovtur på MTB med MTB fra Jensen"> 
 <img src="img/foto/slider/slide2-500px.jpg" alt="På toppen af Danmark på MTB fra Jensen cykler">
 <img src="img/foto/slider/slide3-500px.jpg" alt="På fjældtur på din MTB fra Jensen cykler">
 <img src="img/foto/slider/slide4-500px.jpg" alt="Aften tur med MTB fra Jensen cykler">
-	</section>
+	</section></div>
+
+<!-- Tablet version-->
+  <div id="tabletPic">
+    <section class="sliderTilTyper">
+  <img src="img/foto/slider/slide1-900px.jpg" alt="Skovtur på MTB med MTB fra Jensen"> 
+  <img src="img/foto/slider/slide2-900px.jpg" alt="På toppen af Danmark på MTB fra Jensen cykler">
+  <img src="img/foto/slider/slide3-900px.jpg" alt="På fjældtur på din MTB fra Jensen cykler">
+  <img src="img/foto/slider/slide4-900px.jpg" alt="Aften tur med MTB fra Jensen cykler">
+    </section></div>
+
+    <!-- widescreen version-->
+    <div id="widePic">
+      <section class="sliderTilTyper">
+    <img src="img/foto/slider/slide1-1200px.jpg" alt="Skovtur på MTB med MTB fra Jensen"> 
+    <img src="img/foto/slider/slide2-1200px.jpg" alt="På toppen af Danmark på MTB fra Jensen cykler">
+    <img src="img/foto/slider/slide3-1200px.jpg" alt="På fjældtur på din MTB fra Jensen cykler">
+    <img src="img/foto/slider/slide4-1200px.jpg" alt="Aften tur med MTB fra Jensen cykler">
+      </section></div>
+
+</a>
+
+
 </article>
 
 
 
 <article class="korttiltur">
-	Vi anbefaler disse ruter i Aarhus og omegn.
+<h2>	Vi anbefaler disse ruter i Aarhus og omegn.</h2>
 </article>
 
 

@@ -13,6 +13,7 @@ ul.menu{
     display: none}
 
 .navbar {
+  width: 100%;
     background-color: rgb(255, 255, 255);
     position: sticky;
     top: 0px;
@@ -168,20 +169,42 @@ burger ikonet */
 
 
 
-@media screen and (min-width: 800px) {
-.burger {display: none}
+@media screen and (min-width: 900px) {
+/* Nav bar table + wide */
+  .burger {display: none}
+
+.navbar {
+  width: 100%;
+  height: auto;
+  position: sticky;
+  background-color: rgb(255,255,255,1);
+  display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+
+}
+
+#kurv{
+  display: block;
+  width: 3em;
+}
 
 ul.menu{
+  position: relative;
+    left: 0;
+    top: 0;
     grid-area: nav;
     display: flex;
-    list-style-type: none;
-    justify-content: space-evenly;
+      flex-direction: row;
+      flex-wrap: nowrap;
+
     list-style: none;
-    margin: 0;
-    padding-left: 0;
-    width: 100%;
+    list-style-type: none;
   
+  }
   
+  .search {
+    display: none;
   }
   
   a {
@@ -190,11 +213,10 @@ ul.menu{
   
   
   .menu li {
-    color: #82171e;
+    color: var(--blaa);
     background: inherit;
     display: block;
-    float: left;
-    padding: 1em; /* Test på siden */
+    padding: 0.8em;
     position: relative;
     text-decoration: none;
   
@@ -204,7 +226,7 @@ ul.menu{
   .menu li a {
     margin-top: 0.5em;
     font-size: 30px;
-    color: #82171e;
+    color: var(--blaa);
   }
   
   .menu li:hover {
@@ -218,7 +240,6 @@ ul.menu{
     opacity: 0;
     min-width: 5rem;
     position: absolute;
-    transition: all 0.5s ease;
     left: 0;
     display: none;
   }
@@ -237,4 +258,6 @@ ul.menu{
   }
 
 
-}
+  
+
+} /* 800 width slutter her */

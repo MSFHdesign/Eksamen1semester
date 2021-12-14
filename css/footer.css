@@ -1,10 +1,8 @@
 
-footer h3{
-    margin-bottom: 0.0em;
-    text-decoration: underline;
-}
-.footerbox {
-    grid-area: footer;
+
+.footerbox {grid-area: footer;
+  position: relative;
+    width: 100%;
     display: grid;
     grid-template-areas: 
     "logo"
@@ -12,41 +10,77 @@ footer h3{
     "generel"
     "links"
     "os"
-    "some";
+    "some"
+    "rights";
     text-align: center;
-    background-color: white;
+    background-color: var(--graa);
     color: var(--blaa);
     font-size: 1.5em;
     font-weight: bold;
-  }
+    padding-top: 2em;
   
+  }
+  footer h3 {
+    margin-bottom: 0.0em;
+    text-decoration: underline;
+}
+
   .footerbox a {
     color: var(--blaa);
     text-decoration: none;
     font-style: italic;
   }
   
-  #logoFooter{
-    margin:0.5em;
-    width: 90%;
+  .logoFooter{
+    grid-area: logo;
+
   }
-  
-  .rights{
-    color: white;
-    background-color: var(--blaa)
+  #logoFooter {
+    grid-area: logo;
+    width: 100%;
+ 
   }
 
+  .jensenInfo{
+    grid-area: info;
+  }
+  .jensenlinks {
+    grid-area: generel;
+  }
+  .jensenHvorfor {
+    grid-area:links;
+  }
 
+.Some {
+  grid-area:some;
+}
 
+.rights{
+  width: 100%;
+  grid-area: rights;
+  color: white;
+  background-color: var(--blaa);
 
+  }
 
-@media screen and (min-width: 1200px) {
-    .footerbox {
-        grid-area: footer;
-        display: grid;
-            grid-template-areas: 
-                "logo logo logo logo logo"
-                "info generel links os some"
-                "rights rights rights rights rights";
+@media screen and (min-width: 900px) {
+  .footerbox {
+    display: grid;
+      grid-template-areas: 
+        "logo logo logo logo"
+        "info generel links some"
+        "rights rights rights rights";
     }    
+
+  #logoFooter {
+    margin-left: 1em;
+    width: 500px
+  }  
+
+  .rights {
+    width: 100%;
+  }
+
+
+
 }
