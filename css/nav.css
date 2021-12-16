@@ -12,6 +12,13 @@
 ul.menu{ 
     display: none}
 
+    .home a{
+      display: none;
+      position: relative;
+      font-size: 3rem;
+      font-weight: bolder;
+      color: var(--blaa)
+  }   
 .navbar {
   width: 100%;
     background-color: rgb(255, 255, 255);
@@ -50,14 +57,18 @@ burger ikonet */
     margin: 34px 0 0 0;
     background-color: var(--blaa);
     height: auto;
-    width: 96vw;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    min-height: 300px;
     z-index: 2;
     position: absolute;
     top:0;
     left:0;
+    color: white;
   }
-  
+ .navibar label {
+    font-size: 2rem;
+    margin: 1em 1em;
+  }
   
   /* Usynlig knap */
   .knap2 {
@@ -75,7 +86,7 @@ burger ikonet */
   
   /* søge funktion */
   input[type=text] {
-    margin: 0.4em 0.2em 0.2em 2.3em;
+    margin: 0.4em 0em 0.2em 1em;
     width:4.5em;
     height: 1em;
     box-sizing: border-box;
@@ -88,7 +99,7 @@ burger ikonet */
   /* dropdownmenubar */
   [class^="mere"] {
       display: none;
-      background: #f1f2f2;
+      background: #f2f2f2;
     }
   
   [class^="vismere"] {
@@ -110,8 +121,12 @@ burger ikonet */
   
   /* dropdown layout */
   .navibar h3 {
-    color: white;
+    color: var(--blaa);
     margin: 0.2em 0 0.2em 2em;
+  }
+
+  .navibar h3:hover {
+    color: darkblue
   }
   .navibar li {
     list-style-type: none;
@@ -161,7 +176,7 @@ burger ikonet */
 /* Indkøbskurv ikon */
 #kurv {
   grid-area: ikon;
-  width: 50%;
+  width: 2.5rem;
 }
 
 
@@ -172,7 +187,7 @@ burger ikonet */
 @media screen and (min-width: 900px) {
 /* Nav bar table + wide */
   .burger {display: none}
-
+  .home a{display:contents;}
 .navbar {
   width: 100%;
   height: auto;
@@ -197,7 +212,7 @@ ul.menu{
     display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
-
+      align-items: flex-end;
     list-style: none;
     list-style-type: none;
   
@@ -216,7 +231,7 @@ ul.menu{
     color: var(--blaa);
     background: inherit;
     display: block;
-    padding: 0.8em;
+    padding: 0.5em;
     position: relative;
     text-decoration: none;
   

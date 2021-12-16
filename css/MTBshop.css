@@ -1,4 +1,13 @@
-
+:root {
+  /* farver */
+  --blaa: #080332;
+  --graa: #f2f2f2;
+  --hvid: #ffffff;
+  --sort: #000000;
+  --groen: #128F01;
+  --transparent: 0.70;
+  --margin: 1em;
+}
 .wrapper{
     padding: 0;
     overflow-x: hidden;
@@ -8,7 +17,97 @@
     grid-template-areas:
       "logo"
       "nav"
-      "teas"
+      "shop"
       "footer"
   ; 
+}
+
+.shop {
+  grid-area: shop;
+}
+
+.articleOS{
+  background-color: var(--blaa);
+  color: white;
+  width: 100%;
+  font-size: 2rem;
+  text-align: center;
+}
+.MTBs{
+  display: flex;
+  flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards{
+  max-width: 500px;
+  padding: 1rem 0;
+  color: var(--blaa);
+  background-color: white;
+  display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  z-index:2;
+  margin: 1rem;
+  width: 95%;
+  border: 1px solid lightgray;
+}
+
+
+
+.cardpic{
+  z-index: 1;
+  width: 90%;
+}
+
+.bikeName{
+  font-style: italic;
+  margin: 0 5%;
+  font-size: 1.5rem;
+}
+.price {
+  margin: 2% 0;
+  text-decoration: underline;
+  font-size: 2rem;
+}
+
+.teaser {
+  margin:0 5% 5% 5%;
+}
+
+.detaljer{
+  width: calc(60% - 0.5rem);
+  border: none;
+  background-color: var(--blaa);
+  color: white;
+  padding: 1rem 0.5rem;
+  max-width: 1024px;
+}
+.detaljer:active{
+  background-color:darkblue;
+}
+
+.CTA:active {
+  background-color:darkblue;
+  color: white;
+}
+
+.CTA {
+  
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  border: 3px solid var(--blaa);
+  border-radius: 10px;
+  padding: 1em 4em;
+  color: var(--blaa);
+  background: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  
+
 }

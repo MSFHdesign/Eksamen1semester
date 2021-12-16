@@ -18,6 +18,11 @@
     background: var(--graa);
 }
 
+.mainOS{
+    text-align: center;
+    color: var(--blaa)
+}
+
 .artikelOS {
     text-transform: uppercase;
     text-align: center;

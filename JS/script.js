@@ -1,3 +1,5 @@
+
+
 function sadle() {
   document.getElementById("teasere").innerHTML = "<u><b>Sadle</b></u> <br> Du sidder sjældent ned, det er derfor vigtigt at sadlen er indstillet helt korrekt. Der er mange faktorer der har indflydelse på hvordan du sidder bedst på din MTB. Der kan med fordel læses vores fulde artikel her. ";
 }
@@ -24,9 +26,9 @@ function stel() {
   document.getElementById("teasere").innerHTML = "<u><b>Stel</b></u> <br> For at få maksimal komfort og kraftoverførsel er det vigtigt, at din nye MTB er i den helt rigtige størrelse, læs vores størrelsesguide.<br> Stellet kommet i to materialer. Aluminium og Carbon.";
 }
 function daek() {
-  document.getElementById("teasere").innerHTML = "<u><b>Dæk</b></u> <br> lorem!!!.";
+  document.getElementById("teasere").innerHTML = "<u><b>Dæk</b></u> <br> Dæk med mønster er uundværligt ude i skoven - men mønsteret dæk får dig til at køre langsommere på veje.";
 }
 
 function tomspace() {
-  document.getElementById("teasere").innerHTML = "Klik på cyklens dele og få mere information";
+  document.getElementById("teasere").innerHTML = "Klik på cyklens dele og få mere information.";
 }

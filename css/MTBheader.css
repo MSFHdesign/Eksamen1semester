@@ -50,7 +50,7 @@
         background-position: top;
         background-attachment:scroll;
     width: 100vw;
-    height: 100vh;
+    height: 93vh;
 
 }
 #logoTop{
@@ -65,7 +65,7 @@
 
   } /* slut for 900px width*/
 
-  @media screen and (min-width: 1000px){
+  @media screen and (min-width: 900px){
     .bigpic{    
         position: relative;
         background: url('../img/foto/bigpic6-1000.jpg');
@@ -74,7 +74,7 @@
             background-position: top;
             background-attachment:scroll;
         width: 100vw;
-        height: 100vh;
+        height: 93vh;
     }
 
   }

@@ -18,7 +18,11 @@
 <body class="wrapper"> <!-- Grid master -->
 	<header class="top"> <!-- Skal indeholder Logo på mobil version -->
 		<a href="http://www.jensen.msfh.dk"><img src="img/ikoner/JensenLogo.svg" alt="Jensens nye logo" id="logoTop"></a>
-		<img src="img/ikoner/MTB-logo1200.png" alt="MTB Logo, Jensencyklers MTB" id="MTBpic">
+    <a href="MTB.html">	<picture>
+      <img src="img/ikoner/MTB-logo200.png" alt="MTB Logo, Jensencyklers MTB" id="MTBpic"> 
+      <source srcset="img/ikoner/MTB-logo500.png" media="(min-width: 500px)">
+      <source srcset="img/ikoner/MTB-logo800.png" media="(min-width: 800px)">
+    </picture> </a>
 		</header>
 	<div class="bigpic"></div>
 	<nav class=navbar>
@@ -29,6 +33,7 @@
      
      <!-- Kurv -->
      <img src="img/ikoner/kurv.svg" alt="Jensen cykler indkøbskurv" id="kurv">
+     <div class="home"><a href="index.html">⌂</a></div>
      <!--navigationsbar burger menu -->
      
      
@@ -188,10 +193,11 @@
              <li><a class="sub" href="Guide.html">Guide til køb</a></li>
        </ul>
      </nav> 
-     
+     <!-- CONTENT STARTER HER-->
 <article class="artikler">
+  <h2 class="mainOS"> Kend dit tærren </h2>
     <section id="skov">
-        <h2 class="artikelOS">Skov</h2>
+        <h3 class="artikelOS">Skov</h3>
         <picture>
             <img src="img/foto/slider/slide1-500px.jpg" alt="Skal du på tur i skoven med en MTB fra Jensen Cykler">
         </picture>
@@ -228,49 +234,50 @@
 
 
 
-
+<!-- FOOTER STARTER HER -->
+ 
 <footer class="footerbox">
-    <section class="logofooter">
-        <img id="logoFooter" src="img/ikoner/JensenLogo.svg" alt="Jensen cykler logo bund">
-    </section>
+  <span class="logofooter">
+    <img id="logoFooter" src="img/ikoner/JensenLogo.svg" alt="Jensen cykler logo bund">
+  </span>
 
-    <aside class="jensenInfo">
-        <address>
-            Jensen Cykler <br>
-            Vestre ringgade 27-29 <br>
-            8000 Aarhus C. <br>  </address>
-            Telefon:<a href="tel:+458615599">8615599</a> <br>
-            <a href="mailto:Info@Jensencykler.com">Info@Jensencykler.com</a><br>
-            <a href="mailto:Webshop@Jensencykler.com">Webshop@Jensencykler.com</a><br>
-            CVR: 34021155
-    </aside>
+  <aside class="jensenInfo">
+      <address>
+          Jensen Cykler <br>
+          Vestre ringgade 27-29 <br>
+          8000 Aarhus C. <br>  </address>
+          Telefon:<a href="tel:+458615599">8615599</a> <br>
+          <a href="mailto:Info@Jensencykler.com">Info@Jensencykler.com</a><br>
+          <a href="mailto:Webshop@Jensencykler.com">Webshop@Jensencykler.com</a><br>
+          CVR: 34021155
+  </aside>
 
-    <aside class="jensenlinks">
-        <h3>Generel</h3>
-        <a href="#">Åbningstider</a> <br>
-        <a href="#">Kontakt</a> <br>
-        <a href="#">Handelsbetingelser</a> <br>
-        <a href="#">Leveringsbetingelser</a> <br>
-        <a href="#">Log ind</a> <br>
-    </aside>
+  <aside class="jensenlinks">
+      <h3>Generel</h3>
+      <a href="#">Åbningstider</a> <br>
+      <a href="#">Kontakt</a> <br>
+      <a href="#">Handelsbetingelser</a> <br>
+      <a href="#">Leveringsbetingelser</a> <br>
+      <a href="#">Log ind</a> <br>
+  </aside>
 
-    <aside class="jensenHvorfor">
-        <h3>Hvorfor os?</h3>
-        <a href="#">Hvem er vi?</a> <br>
-        <a href="#">Shimano service center</a> <br>
-        <a href="#">Vores mærke</a> <br>
-    </aside>
+  <aside class="jensenHvorfor">
+      <h3>Hvorfor os?</h3>
+      <a href="#">Hvem er vi?</a> <br>
+      <a href="#">Shimano service center</a> <br>
+      <a href="#">Vores mærke</a> <br>
+  </aside>
 
-    <aside class="Some">
-        <h3>Sociale medier</h3>
-        <a href="#">Instagram</a> <br>
-        <a href="#">Facebook</a> <br>
-        <a href="#">Youtube</a> <br>
-    </aside>
+  <aside class="Some">
+      <h3>Sociale medier</h3>
+      <a href="#">Instagram</a> <br>
+      <a href="#">Facebook</a> <br>
+      <a href="#">Youtube</a> <br>
+  </aside>
 
-    <section class="rights">
-        <p>© 2021 MSFHdesign. All Rights Reserved.</p>
-    </section>
+  <div class="rights">
+      <p>© 2021 MSFHdesign. All Rights Reserved.</p>
+  </div>
 </footer>
 </body>
 </html>

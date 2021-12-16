@@ -1,7 +1,6 @@
 
 
 .footerbox {grid-area: footer;
-  position: relative;
     width: 100%;
     display: grid;
     grid-template-areas: 
@@ -13,11 +12,13 @@
     "some"
     "rights";
     text-align: center;
+    justify-content: stretch;
     background-color: var(--graa);
     color: var(--blaa);
     font-size: 1.5em;
     font-weight: bold;
     padding-top: 2em;
+    margin: 0;
   
   }
   footer h3 {
@@ -31,20 +32,20 @@
     font-style: italic;
   }
   
-  .logoFooter{
-    grid-area: logo;
 
-  }
   #logoFooter {
+    margin: 1rem;
     grid-area: logo;
-    width: 100%;
+    width: 90%;
  
   }
 
   .jensenInfo{
+    margin: 0;
     grid-area: info;
   }
   .jensenlinks {
+    float: none;
     grid-area: generel;
   }
   .jensenHvorfor {
@@ -67,20 +68,29 @@
   .footerbox {
     display: grid;
       grid-template-areas: 
-        "logo logo logo logo"
-        "info generel links some"
-        "rights rights rights rights";
+        "logo logo logo"
+        "info info info"
+        "generel links some"
+        "rights rights rights";
+
     }    
-
-  #logoFooter {
-    margin-left: 1em;
-    width: 500px
-  }  
-
-  .rights {
-    width: 100%;
+    #logoFooter{
+      margin: 0;
+      grid-area: logo;
+  
+    }
+  .jensenInfo{
+    grid-area: "info";
+  
+  }
+  .jensenlinks {
+    grid-area: generel;
+  }
+  .jensenHvorfor {
+    grid-area:links;
   }
 
-
-
+.Some {
+  grid-area:some;
+}
 }

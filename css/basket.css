@@ -51,6 +51,7 @@ a {
 
       grid-area: pic;
       width: 90%;
+      max-width: 500px
   }
 
   #productName {
@@ -66,7 +67,7 @@ a {
     color: var(--groen);
     grid-area: pris;
 }
-  
+
 
   
   .row {
