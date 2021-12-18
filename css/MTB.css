@@ -51,7 +51,7 @@
     padding: 0.4em 0 0.4em 0;
     font-size: 20px;
     position: relative;
-    top: 60%;
+      top: 12rem;
 }
 #teaser a{
   text-decoration: none;
@@ -209,12 +209,20 @@
     text-decoration: none;
     color: white;
 }
+#mobilPic{
+  min-width: 250px;
+  max-width: 500px;
+}
 
 #tabletPic {
+  min-width: 900px;
+  max-width: 900px;
   display: none;
 }
 
 #widePic{
+  min-width: 1200;
+  max-width: 1200px;
   display: none;
 }
 

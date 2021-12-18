@@ -195,14 +195,17 @@
 <!-- Content starter her -->
 
 <article class="basket">
-    <h2>Indkøbskurv</h2>
-    <h3>*Dette er til et eksamensprojekt*</h3>
+  <div id="warning">
+  <h1>* Dette er til et eksamensprojekt * <br>
+  * Det er derfor ikke en rigtig webshop *</h1> </div>
+  <h2>Indkøbskurv</h2>
+ 
 
 
 <section id="product">
 <picture>
-  <source media="(min-width: 500px)" srcset="img/ikoner/MTB-logo500.png">
-<img src="img/foto/produkt/shoppic/specialized29.jpeg" alt="du har dette i din kurv" class="basketPic"></picture>
+  <source media="(min-width: 500px)" srcset="img/foto/produkt/shoppic/specialized-450.jpeg">
+<img src="img/foto/produkt/shoppic/specialized-350.jpeg" alt="du har dette i din kurv" class="basketPic"></picture>
 <h2 id="productName"><em>Specialized</em> 29" </h2>
 <h3 id="ctaPris">Pris: 53.999,-</h3>
 
@@ -264,10 +267,7 @@
             </div>
             
           </div>
-          <label>
-            <input type="checkbox" checked="checked" name="sameadr"> Leverings adresse og betalings adresse er den samme
-          </label>
-          <input type="submit" value="Klik og betal" class="CTA">
+
   
       </div>
     </div>
@@ -277,6 +277,11 @@
         <p><em>Specialized</em> 29" <span class="price">53.999,-</span></p>
         <hr>
         <p>Total: <span class="price"><b>53.999,-</b></span></p>
+
+        <label>
+          <input type="checkbox" checked="checked" name="sameadr"> Leverings adresse og betalings adresse er den samme
+        </label>
+        <input type="submit" value="Klik og betal" class="CTA">
       </div>
     </div>
   </section>

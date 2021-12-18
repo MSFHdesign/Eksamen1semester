@@ -204,7 +204,47 @@
     <h2 class="articleOS">
         Se vores udvalg af MTB
     </h2>
+<div class="sorting">
+<div> <h3>Budget:</h3>
+  <input type="range" value="10000" min="1" max="25000" oninput="this.nextElementSibling.value = this.value">
+  <output>1000</output> kr </div>
 
+  <h3> Sorter efter:</h3>
+  <select name="sortby" id="sortby">
+    <option value="prisLowHigh"> Pris - lav til høj</option>
+    <option value="fullsusp"> Pris - høj til lav</option>
+    <option value="name"> Navn </option>
+    <option value="mostsold"> Mest solgte </option>
+    <option value="new"> Nyeste </option>
+    </select>
+
+  <h3> specifikationer:</h3>
+  <select name="Suspension" id="susp">
+    <option value="" disabled selected> Suspension:</option>
+    <option value="fullsusp"> Full suspension</option>
+    <option value="regsusp"> Alm suspension</option>
+    <option value="nonsusp"> Ingen suspension</option>
+   
+  </select><br>
+  <select name="breaks" id="breaks">
+    <option value="" disabled selected> Bremser:</option>
+    <option value="Hydrabreak"> Hydrauliske bremser</option>
+    <option value="Mechbreak"> Mekaniske bremser</option>
+
+  </select><br>
+  <select name="gear" id="gear">
+    <option value="" disabled selected> Gear:</option>
+    <option value="innerG"> Indvendige</option>
+    <option value="outerG"> Udvendige</option>
+  </select> <br>
+  <select name="daek" id="daek">
+    <option value="" disabled selected> Hjulstørrelse</option>
+    <option value="28"> 26"</option>
+    <option value="27.5"> 27.5"</option>
+    <option value="29"> 29"</option>
+ 
+  </select>
+</div>
 
 <div class="MTBs">
   <section class="cards">
@@ -213,7 +253,7 @@
       <source media="(min-width: 500px)" srcset="img/foto/produkt/shoppic/specialized-450.jpeg">
       <img src="img/foto/produkt/shoppic/specialized-350.jpeg" alt="Specialized chisel comp men sort" class="cardpic">
     </picture>
-    <h3 class="price"> 15.499 kr</h3>
+    <h3 class="price"> 53.999 kr</h3>
     <p class="teaser"> Den nye Specialized Chisel er den perfekte cykel til dem, som ønsker at begive sig i kast med XC. I denne får man nemlig en XC-cykel, som har alle de egenskaber, som kræves for en top-moderne XC-racer, dog bare til en overkomme pris.</p> 
     <a href="kurv.html" class="CTA">Se detaljer</a>
   </section>
@@ -225,7 +265,7 @@
       <img src="img/foto/produkt/shoppic/specializedrockhopperelite-350.jpeg" alt="Specialized chisel comp men sort" class="cardpic">
     </picture>
     
-    <h3 class="price"> 53.999 kr</h3>
+    <h3 class="price"> 15.499 kr</h3>
     <p class="teaser"> 100mm BRAIN-kontrolleret vandring. FACT 11m carbon ramme forbedre bagendens stivhed og medfører, at du får større kraftoverførelse og de bedste styreegenskaber.</p>  
     <a href="kurv.html" class="CTA">Se detaljer</a>
   </section>

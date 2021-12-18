@@ -65,17 +65,25 @@ a {
 }
 
 
-.infographic{
+#infographic{
   grid-area: infographic;
-  position: relative;
   top:0;
   display: grid;
     grid-template-areas:
+      "OS"
       "pic"
      "tekst";
      justify-items: center;
+  height: auto;
 }
-.infographic A{
+.mobilmap{
+  height: 412px;
+}
+#Mobil{
+  max-width: 412px;
+  max-height: 297px;
+}
+#infographic A{
   text-align: center;
   color: white;
   text-decoration: underline;
@@ -104,7 +112,7 @@ a {
 }
 
 .infographicText {
-  margin-top: -2em;
+  margin-top: -8em;
   grid-area: tekst;
   z-index: 3;
   width: 100%;
@@ -154,7 +162,7 @@ a {
   }
 .info-box-tekst{
   text-align: center;
-  margin-top: -4em;
+  margin-top: 0em;
 }
 
 .info-box h3{
@@ -261,12 +269,9 @@ a {
 
  /* tablet */
 @media screen and (min-width: 900px) {
- 
-
   .mobilmap{
     display: none;
   }
-
   .tablet-map {
     display: block;
   }
@@ -305,5 +310,4 @@ a {
 }
 .widescreen-map {
   display: block}
-
 }

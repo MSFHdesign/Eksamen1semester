@@ -24,16 +24,50 @@
 
 .shop {
   grid-area: shop;
+  display: grid;
+  grid-template-areas:
+  "OS OS"
+  "sort MTB";
+  grid-template-columns: 30% 70%;
 }
 
 .articleOS{
+  grid-area: OS;
   background-color: var(--blaa);
   color: white;
   width: 100%;
   font-size: 2rem;
   text-align: center;
 }
+
+.sorting{
+  background-color: white;
+  text-align: center;
+  display: flex;
+    align-content: flex-start;
+    flex-direction: column;
+  border: 1px solid black;
+  grid-area: sort;
+    position: sticky;
+    top: 2.5em; 
+  margin-left: 5%;
+  padding-bottom: 1em;
+  height: fit-content;
+}
+.sorting h3 {
+  font-size: 1rem;
+}
+
+.sorting input{
+  width: 90%;
+}
+.sorting select {
+  margin-left: 5%;
+  width: 90%;
+}
+
 .MTBs{
+  grid-area: MTB;
   display: flex;
   flex-wrap: wrap;
     flex-direction: row;
@@ -42,6 +76,7 @@
 }
 
 .cards{
+  border: 1px solid black;
   max-width: 500px;
   padding: 1rem 0;
   color: var(--blaa);
@@ -51,9 +86,9 @@
     flex-direction: column;
     align-items: center;
   z-index:2;
-  margin: 1rem;
+  margin: 0% 5% 5% 2.5%;
   width: 95%;
-  border: 1px solid lightgray;
+
 }
 
 
@@ -66,7 +101,7 @@
 .bikeName{
   font-style: italic;
   margin: 0 5%;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 .price {
   margin: 2% 0;
@@ -102,12 +137,22 @@
   appearance: button;
   border: 3px solid var(--blaa);
   border-radius: 10px;
-  padding: 1em 4em;
+  padding: 0.5em 1em;
   color: var(--blaa);
   background: none;
   font-size: 1.5rem;
   font-weight: bold;
   text-decoration: none;
   
+
+}
+
+
+@media screen and (min-width: 900px) {
+  .sorting{
+    top: 6em;
+  
+  }
+
 
 }
