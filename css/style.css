@@ -32,7 +32,9 @@
 a {
   text-decoration: none;
 }
-
+.test360 {
+  display: none;
+}
 .top{ 
   display: flex;
   justify-content: center;
@@ -164,15 +166,24 @@ a {
   text-align: center;
   margin-top: 0em;
 }
+.info-box h2 {
+  font-size: 2rem;
+}
 
 .info-box h3{
+  font-size: 1.5rem;
   margin-top: -1em;
 }
 
 .ekstra {
+  width: 100%;
   overflow-x: scroll;
   grid-area: ekstra;
   text-align: center;
+}
+
+img.teasereimg {
+  width: 100%;
 }
 
 .overskrift {
@@ -204,6 +215,8 @@ a {
   }
 
   .cardteasere {
+    min-width: 360px;
+    max-width: 500px;
     margin: 0.5em;
     justify-content: center;
     align-content: center;
@@ -212,13 +225,30 @@ a {
     height: auto;
   
   }
-
-  .teasereimg {
-    grid-area: pic;
-    width: 90vw;
-    max-width: 500px;
-    height: auto;
+.teasereimg {
+  min-width: 360px;
+  max-width: 500px;
+  height: auto;
+}
+  
+ 
+.flextext{
+  position: relative;
+    top: calc(-3.5rem - 3px);
+  padding: 3px;
+  background-color: var(--blaa);
   }
+
+ .flexH{
+   text-transform: uppercase;
+   font-size: 1.5rem;
+  color: white;
+ } 
+
+ .flexartikel picture{
+   max-width: 500px;
+ }
+
 .dotsleft{
   top: 0;
   left: 0;
@@ -310,4 +340,15 @@ a {
 }
 .widescreen-map {
   display: block}
+}
+
+@media screen and (max-width: 361px) {
+
+  .mobilmap {
+    display: none;
+  }
+  .test360{
+    display: contents;
+  }
+
 }

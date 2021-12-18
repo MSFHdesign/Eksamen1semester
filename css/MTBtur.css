@@ -1,4 +1,13 @@
-
+:root {
+    /* farver */
+    --blaa: #080332;
+    --graa: #f2f2f2;
+    --hvid: #ffffff;
+    --sort: #000000;
+    --groen: #128F01;
+    --transparent: 0.70;
+    --margin: 1em;
+  }
 .wrapper{
     padding: 0;
     overflow-x: hidden;
@@ -10,8 +19,6 @@
       "nav"
       "1"
       "2"
-      "3"
-      "4"
       "footer";     
 }
 .artikel{
@@ -19,22 +26,35 @@
 }
 
 .mainOS{
+    margin: 1em 0 0 0;
     text-align: center;
-    color: var(--blaa)
+    color: var(--blaa);
 }
 
 .artikelOS {
+    font-size: 2.5rem;
     text-transform: uppercase;
     text-align: center;
     color: white;
     background: var(--blaa);
     padding: 1%;
+    margin: 0em 0 0 0;
+}
+.afsnitOS {
+    font-size: 2rem;
+    text-align: center;
     margin: 1em 0 0 0;
+
+}
+
+.artikler a{
+    color: red;
+    text-decoration: none;;
 }
 
 .artikelP{
     margin: 0 0.5em 0 0.5em;
-    font-size: 20px;
+    font-size: 1.2rem;
 }
 
 .artikler img{
@@ -45,14 +65,7 @@
     grid-area: 1;
 }
 
-#grus {
-    grid-area: 2;
-}
-
 #landeveje {
-    grid-area: 3;
-}
-
-#tracks {
-    grid-area: 4;
+    margin-top: 2em;
+    grid-area: 2;
 }

@@ -13,7 +13,8 @@
     <script src="JS/script.js"></script> <!-- script til map-->
 
 	<!-- favicon = ikon i faneblad / browser -->
-	<link rel="icon" type="image/x-icon" href="img/ikoner/x-icon.svg"/>
+	<link rel="icon" type="image/x-icon" href="img/ikoner/x-icon.png"/>
+
 </head>
 
 <!-- content her fra -->
@@ -208,6 +209,8 @@
     </div>
 
     <article id="infographic"> <!--Infographic-->
+      <div class="test360"> <img src="img/foto/infographic360.jpg" alt="Få hjælp til at vælge din næste cykel. få alt information om dele på en MTB lige her." class="infographicPic" loading="lazy"></div>
+
       <div class="mobilmap">
         <img src="img/foto/infographic412.jpg" alt="Få hjælp til at vælge din næste cykel. få alt information om dele på en MTB lige her. " usemap="#MTBmobil" width="412" height="297" class="infographicPic" id="Mobil" loading="lazy">
     
@@ -296,9 +299,6 @@
 
     <div class="infographicText"> <h4 id="teasere"> Klik på billedet og læs mere om den del af cyklen  </h4> <a href="MTB.html"><p>Se vores MTB kampagnen </p></a> </div>
 
-
-           
-    
     </article>
 
 <!-- værksted reklame søjle med responsive billede størrelse.-->
@@ -312,22 +312,48 @@
   </article>
   
   <div class="flexartikel">
-      <span class="cardteasere">
-      <a href="#">  <img class="teasereimg" src="img/foto/produkt/forsideslider/cykelsko.jpeg" alt="Se Jensens Cyklers STORE udvalg af cykelsko her!"></a>
-      </span>
-      <span class="cardteasere">
-        <a href="#">  <img class="teasereimg" src="img/foto/produkt/forsideslider/briller.jpeg" alt="Se Jensens Cyklers STORE udvalg af cykelbriller her!"></a>
-    
-      </span>
-        <span class="cardteasere">
-          <a href="#">  <img class="teasereimg" src="img/foto/produkt/forsideslider/hjelm.jpeg" alt="Se Jensens Cyklers STORE udvalg af cykelhjelm her!"></a>
+      <section class="cardteasere">
+      <a href="#"> <picture>
+        <source media="(min-width: 500px)" srcset="img/foto/produkt/forsideslider/cykelsko.jpeg">
+        <img class="teasereimg" src="img/foto/produkt/forsideslider/cykelsko370.jpeg" alt="Se Jensens Cyklers STORE udvalg af cykelsko her!" width="360" height="auto">
       
-        </span>
-
-          <span class="cardteasere">
-            <a href="#">  <img class="teasereimg" src="img/foto/produkt/forsideslider/lygter.jpeg" alt="Se Jensens Cyklers STORE udvalg af sikkerhedsudstyr her!"></a>
+      </picture></a>
+      <div class="flextext">
+        <a href="#"> <h3 class="flexH">Cykelsko</h3> </a>
+      </div>
+      </section>
+      <section class="cardteasere">
+        <a href="#"> <picture>
+          <source media="(min-width: 500px)" srcset="img/foto/produkt/forsideslider/briller.jpeg">
+          <img class="teasereimg" src="img/foto/produkt/forsideslider/briller370.jpeg" alt="Se Jensens Cyklers STORE udvalg af cykelbriller her!" height="auto">
         
-          </span>
+        </picture></a>
+        <div class="flextext">
+          <a href="#">  <h3 class="flexH">Cykelbriller</h3> </a>
+        </div>
+      </section>
+        <section class="cardteasere">
+          <a href="#"> 
+            <picture> 
+              <source media="(min-width: 500px)" srcset="img/foto/produkt/forsideslider/hjelm.jpeg">
+              <img class="teasereimg" src="img/foto/produkt/forsideslider/hjelm370.jpeg" alt="Se Jensens Cyklers STORE udvalg af cykelhjelm her!" width="360" height="auto">
+
+            </picture></a>
+          <div class="flextext">
+            <a href="#"> <h3 class="flexH">Cykelhjelme</h3> </a>
+          </div>
+        </section>
+
+          <section class="cardteasere">
+            <a href="#"> <picture>
+              <source media="(min-width: 500px)" srcset="img/foto/produkt/forsideslider/lygter.jpeg"> 
+              <img class="teasereimg" class="cardpic" src="img/foto/produkt/forsideslider/lygter370.jpeg" alt="Se Jensens Cyklers STORE udvalg af sikkerhedsudstyr her!" width="360" height="auto">
+            
+            </picture></a>
+            <div class="flextext">
+              <a href="#">  <h3 class="flexH">Sikkerhedsudstyr</h3> </a>
+            </div>
+          </section>
 
 
         </div>
