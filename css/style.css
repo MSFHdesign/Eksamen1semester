@@ -124,6 +124,11 @@ a {
   color: var(--white);
 
 }
+#OS{
+  color: white;
+  text-decoration: underline;
+  text-align: center;
+}
 
 #teasere {
   grid-area: cardflex;
@@ -305,7 +310,10 @@ img.teasereimg {
   .tablet-map {
     display: block;
   }
- 
+ #logoTop{
+   width: 100%;
+   height: 70px;
+ }
 
   .infobox {
     font-size: 35px;

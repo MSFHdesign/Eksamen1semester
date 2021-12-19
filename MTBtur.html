@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/MTBtur.css"> <!-- Index CSS -->
     <link rel="stylesheet" href="css/footer.css"> <!-- Footer CSS-->
     <link rel="stylesheet" href="css/MTBheader.css"> <!-- nav CSS-->
+    <script src="JS/tur.js"></script>
 	<!-- favicon = ikon i faneblad / browser -->
 	<link rel="icon" type="image/x-icon" href="img/ikoner/x-icon.png"/>
 </head>
@@ -35,7 +36,7 @@
     
     <!-- Kurv -->
       <img src="img/ikoner/kurv.svg" alt="Jensen cykler indkøbskurv" id="kurv">
-     <div class="home"><a href="index.html">⌂</a></div>
+     <div class="home"><a href="index.html">🔍</a></div>
     <div class="burger">
         <input id="dropdown" class="knap2" type="checkbox">
         <label for="dropdown" class="dropdownnav"> ☰ </label>
@@ -198,26 +199,32 @@
     
     </nav> <!-- NAV SLUTTER -->
      <!-- CONTENT STARTER HER-->
-<article class="artikler">
+<div class="artikler">
   <h2 class="mainOS"> Kend dit tærren </h2>
-  <a href="#skov"><h4>Læs skov </h4></a>
-  <a href="#landeveje"><h4>Læs landeveje </h4></a>
-    <section id="skov">
+  <div id="links"><a href="#skov" class="scroll"><h4>Skov </h4></a>
+  <a href="#landeveje" class="scroll"><h4>Landeveje </h4></a></div>
+ 
+  <article id="skov">
         <h3 class="artikelOS">Skov</h3>
         <picture>
           <source media="(min-width: 600px)" srcset="img/foto/slider/slide1-900px.jpg">
           <source media="(min-width: 900px)" srcset="img/foto/slider/slide1-1200px.jpg">
-            <img src="img/foto/slider/slide1-500px.jpg" alt="Skal du på tur i skoven med en MTB fra Jensen Cykler">
+            <img src="img/foto/slider/slide1-500px.jpg" alt="Skal du på tur i skoven med en MTB fra Jensen Cykler" class="teasPIC">
         </picture>
         <h4 class="afsnitOS">Kend dit underlag</h4>
         <p class="artikelP">Når der køres i skoven veksler terrænet en del. Her vil du opleve at støde på skovstier eller grus. Ligeledes kan der findes skovstier, som giver noget tempo og nogle udfordringer igennem de flotte skove. Her skal tungen holdes lige i munden og forsigtighed er vigtigt at tænke på alt efter hvilke spor der køres på. Teknikken ved MTB, er vigtigt at have styr på. Her kan der i forskellige skove findes tekniske baner, downhill, pumptracks osv. Derfor er det vigtigt at forstå og kende sin MTB og hvilket udstyr den har. Herunder er et par overvejelser man skal gøre sig.</p>
         <h4 class="afsnitOS">Hvad skal du så overveje?</h4>
-        <h4 class="afsnitOS">Stel</h4>
-        <p class="artikelP"> 
+    
+        <button class="readmore" onclick="skovtekst()"> Læs mere </button>
+        <div id="mereSkov">
+        <section class="komponenter">
+        <h4 class="komponentOS">Stel</h4>
+        <p class="komponentP"> 
           At tænke over stelstørrelse er ligeledes vigtigt alt efter om du er kvinde eller mand. Kvindestel er som udgangspunkt en smule kortere og yder derfor mere komfort til en kvindekrop. Dog findes der et langt større udvalg af herrestel, men det er en faktor at have med i sine overvejelser.
-          </p> 
-          <h4 class="afsnitOS">Bremser</h4>
-        <p class="artikelP"> 
+          </p> </section>
+          <section class="komponenter">
+          <h4 class="komponentOS">Bremser</h4>
+        <p class="komponentP"> 
           
           De fleste MTB har skivebremser, da dette er meget mere effektivt, når der skal bremses i skoven. V-bremser findes også, men disse et typisk ikke førstevalg ved MTB-cyckler, da bremserne er mindre effektive, hvorimod skivebremser er velegnede og ikke påvirkes i samme grad som v-bremsen ved vand, snavs og jord. Herunder findes to varianter som er værd at undersøge:
           1.	Hydrauliske bremser
@@ -225,74 +232,93 @@
           2.	Mekaniske skivebremser
           Denne type bremser fungerer med kabeltræk og bremsekraften er sværere.
           Bremserne er ikke punkt vi vil råde dig til at sparer penge på, hvis ønsket er at benytte den i skoven.
-          
           </p> 
-          <h4 class="afsnitOS">Gear</h4>
-          <p class="artikelP"> 
+
+              <img src="img/foto/tur/bremse360.jpeg" alt="Jensens cyklers bremser"  id="breaks" class="komponentPic">
+ </section>
+          <section class="komponenter">
+          <h4 class="komponentOS">Gear</h4>
+          <p class="komponentP"> 
             De fleste komponenter på en MTB, kommer ved at kigge på gearene. Det er her fokus på funktionalitet kommer ind, da der er mange valgmuligheder og de faktorer der spiller ind, er holdbarhed, vægten og præcision. Når det kommer til at vælge gear der passer til terræn i skoven, vil udvendige gear være vores fortrukne valg. Der skal dog nævnes at denne type gear kræver mere vedligeholdelse.
             </p> 
-            <h4 class="afsnitOS">Hjul</h4>
-            <p class="artikelP"> 
-              
-              Når der skal kigges på hjulstørrelse, handler det om køreoplevelsen samt afvejning mellem fart og kontrol. Som udgangspunkt handler hjulstørrelsen om hvor du skal køre. Hvis det er tekniske ruter og ujævnt terræn så anbefales et mindre hjul. Ved ujævnt terræn og huller i jorden, som findes i skoven, vil anbefalingen ligge på et 29” hvis du er nybegynder. Er du mere øvet er det et personligt valg ud fra flere faktorer.
-              
-              </p> 
 
-              <h4 class="afsnitOS"> Dæk</h4>
-              <p class="artikelP"> 
+                <img src="img/foto/tur/gear360.jpeg" alt="Jensen cyklers gear"  id="gear"  class="komponentPic">
+ </section>
+            <section class="komponenter">
+            <h4 class="komponentOS">Hjul</h4>
+            <p class="komponentP"> 
+              
+              Når der skal kigges på hjulstørrelse, handler det om køreoplevelsen samt afvejning mellem fart og kontrol. Som udgangspunkt handler hjulstørrelsen om hvor du skal køre. Hvis det er tekniske ruter og ujævnt terræn så anbefales et mindre hjul. Ved ujævnt terræn og huller i jorden, som findes i skoven, vil anbefalingen ligge på et 29” hvis du er nybegynder. Er du mere øvet er det et personligt valg ud fra flere faktorer.</p> 
+
+                  <img src="img/foto/tur/hjul360.jpeg" alt="Jensen cyklers hjul"  id="hjul" class="komponentPic">
+              </section>
+              <section class="komponenter">
+              <h4 class="komponentOS"> Dæk</h4>
+              <p class="komponentP"> 
                 
-                Hvilken form for dæk du skal vælge, betyder også en del for din køreoplevelser når du kører på ujævnt terræn som i de danske skove. Her skal du være opmærksom på mudder, løs jord, huller og rødder som et par eksempler. Derfor har mønsteret samt bredde en stor effekt på din personlige kørerstil. Dæk med mønster er uundværlig ude i skoven, men mønsteret får dig til at køre langsommere på veje og stier. Et helårs-dæk med en god bredde på, vil have et godt greb på det terræn der findes i de danske skove og er velegnet til dette terræn. Oftest vil MTB-kører variere meget i hvad der foretrækkes, da der er ulemper og fordele at finde ved de fleste dæk. Det kan nævnes at en store del, vælger at kører med forskellige typer dæk foran og bagpå for at få den bedste kombination og køreoplevelse.
+                Hvilken form for dæk du skal vælge, betyder også en del for din køreoplevelser når du kører på ujævnt terræn som i de danske skove. Her skal du være opmærksom på mudder, løs jord, huller og rødder som et par eksempler. Derfor har mønsteret samt bredde en stor effekt på din personlige kørerstil. Dæk med mønster er uundværlig ude i skoven, men mønsteret får dig til at køre langsommere på veje og stier. Et helårs-dæk med en god bredde på, vil have et godt greb på det terræn der findes i de danske skove og er velegnet til dette terræn. Oftest vil MTB-kører variere meget i hvad der foretrækkes, da der er ulemper og fordele at finde ved de fleste dæk. Det kan nævnes at en store del, vælger at kører med forskellige typer dæk foran og bagpå for at få den bedste kombination og køreoplevelse.</p>
+
+                    <img src="img/foto/tur/daekwhite360.jpeg" alt="Jensen cyklers dæk"  class="komponentPic">
+
                 
-                
-                </p> 
-                <h4 class="afsnitOS"> Affjedring</h4>
-                <p class="artikelP"> 
+                 </section>
+                 <section class="komponenter"> 
+                <h4 class="komponentOS"> Affjedring</h4>
+                <p class="komponentP"> 
                   
                   Affjedring
                   Når der skal vælges en MTB, som giver en god køreoplevelse på det ujævne terræn der findes i skovene herhjemme, er affjedring en vigtig faktor at kigge på. Der findes forskellige typer af trails og dermed er der også forskellige tekniske egenskaber MTB skal kunne. Der findes her to valg som er vigtigt at sætte sig ind i:
                   1.	Hardtail
                   En hardtail er mest udbredt, men for at kunne kører i skovens terræn, vil forgaflen altid være affjedret. Denne type cykel er oftest en billigere valgmulighed. Herunder hardtail findes der dog forskellige typer af affjedring, der har en betydning. Forgaflen kan købes med fjederafdæmper, der ikke kræver meget vedligeholdelse men omvendt så er dine muligheder for individuelle justeringer små. Ved at købe luftaffjedring, kræver det en del mere vedligeholdelse og noget teknisk viden, men til gengæld kan den justeres til din individuelle vægt og rebound effekten vil derfor også justeres. Sidstnævnte er værd at investere i, hvis du vil bruge mange timer i de danske skove. 
                   2.	Full Suspension
-                  En Full Suspension er fuldt ud affjedret både foran og bagpå. Køreoplevelsen på denne vil være en helt anden, da du vil opleve en anden kontrol over MTB og terræn vil ikke have en betydning for en øm kroppen dagen efter en god tur i skoven. Fuld affjedring giver dig nogle andre køretekniske muligheder, men vejer mere end hardtail samt kræver mere vedligeholdelse.
-                  
-                  
-                  
-                  </p> 
-
-                  <p class="artikelP">Som en sidste godt råd, skal du checke om affjedringen har en lock-out. Dette er vigtigt for at undgå ”wobling”. Det giver dig ligeledes mulighed for at kunne benytte MTB andetsteds end skoven. Din køreoplevelse er derfor sikret at blive god.</p>
-    </section>
-
-
-    <section id="landeveje">
+                  En Full Suspension er fuldt ud affjedret både foran og bagpå. Køreoplevelsen på denne vil være en helt anden, da du vil opleve en anden kontrol over MTB og terræn vil ikke have en betydning for en øm kroppen dagen efter en god tur i skoven. Fuld affjedring giver dig nogle andre køretekniske muligheder, men vejer mere end hardtail samt kræver mere vedligeholdelse. <br>
+                  Som en sidste godt råd, skal du checke om affjedringen har en lock-out. Dette er vigtigt for at undgå ”wobling”. Det giver dig ligeledes mulighed for at kunne benytte MTB andetsteds end skoven. Din køreoplevelse er derfor sikret at blive god.</p>
+ 
+                      <img src="img/foto/tur/suspension360.jpeg" alt="Jensen cyklers hjul" id="suspension"  class="komponentPic">
+                  </section>
+                </div>
+            </article>
+    <article id="landeveje">
         <h2 class="artikelOS">Landeveje</h2>
         <picture>
           <source media="(min-width: 600px)" srcset="img/foto/slider/slide3-900px.jpg">
           <source media="(min-width: 900px)" srcset="img/foto/slider/slide3-1200px.jpg">
-            <img src="img/foto/slider/slide3-500px.jpg" alt="Skal du på tur på landevej med en MTB fra Jensen Cykler?">
+            <img src="img/foto/slider/slide3-500px.jpg" alt="Skal du på tur på landevej med en MTB fra Jensen Cykler?" class="teasPIC">
         </picture>
         <h4 class="afsnitOS">Kend dit underlag</h4>
         <p class="artikelP">En cykeltur på landevej på en MTB med affjedring giver en komfortabel køretur selv på landevejen. En tur til og fra arbejde behøver ikke være på en hård cykel uden komfort. Ved at udskifte din gamle cykel, til en MTB kan du få bedre kontrol over cyklen samt højere hastighed ved smalle hjul uanset hvad. Hvis du skal på cykelferie med flere stop er dette også meget velegnet til at sikre at kroppen ikke er øm dagen efter, når du skal lægge flere km bag dig endnu en gang. I vinterhalvåret er MTB ligeledes en god cykel at vælge, da grebet er anderledes selv ved sne.</p>
         <h4 class="afsnitOS">Hvilket udstyr er nødvendigt?</h4>
- 
-          <h4 class="afsnitOS">Bremser</h4>
-        <p class="artikelP"> 
+        
+        <button class="readmore" onclick="vejtekst()"> Læs mere </button>
+        <div id="mereVej">
+        <section class="komponenter">
+          <h4 class="komponentOS">Bremser</h4>
+        <p class="komponentP"> 
           
           De fleste MTB kører med skivebremser da dette giver den mest effektive bremseegenskab når du kører. Alt efter vind og vejr vil både v-bremser, hydraulik og mekaniske bremser gøre det rette arbejde. Vi vil anbefale mekaniske bremser ved A til B kørsel, da denne bremse fungerer suverænt på asfalt.
           
-          </p> 
-          <h4 class="afsnitOS">Gear</h4>
-          <p class="artikelP"> 
+          </p>
+          <img src="img/foto/tur/bremseskive360.jpeg" alt="Jensens cyklers bremserskiver"  id="bremseskiver" class="komponentPic">
+        </section>
+          <section class="komponenter">
+          <h4 class="komponentOS">Gear</h4>
+          <p class="komponentP"> 
             Der findes mange typer gear, men det handler her om cyklen kun benyttes på asfalt. Vores anbefaling er indvendige gear, da det kræver minimum vedligeholdelse og udvendige gear vil have en effekt ved kørsel om vinteren med salt på vejene. Vælg kun dette hvis du er sikker på du kun skal bruge den på veje eller stier.
             </p> 
-            <h4 class="afsnitOS">Hjul</h4>
-            <p class="artikelP"> 
+            <img src="img/foto/tur/gear360.jpeg" alt="Jensen cyklers indvendige gear"  id="gearinside"  class="komponentPic">
+          </section>
+            <section class="komponenter">
+            <h4 class="komponentOS">Hjul</h4>
+            <p class="komponentP"> 
               
               Der er en del ting du skal være opmærksom på med dine hjul, først er hjulstørrelsen. Der findes mange størrelser, de fleste MTB bruger enten 27,5” eller 29”. Tommerens betydning på dit hjul er om du prioriterer fart eller kontrol. Ved landevejskørsel er det en individuel køreoplevelse der har en betydning for valg af hjul.
               
-              </p> 
-
-              <h4 class="afsnitOS"> Dæk</h4>
-              <p class="artikelP"> 
+              </p>
+              <img src="img/foto/tur/hjul360.jpeg" alt="Jensen cyklers hjul til alle"  id="hjul" class="komponentPic">
+            </section>
+              <section class="komponenter">
+              <h4 class="komponentOS"> Dæk</h4>
+              <p class="komponentP"> 
                 
                 Der findes to typer til MTB, Slick og semi slick.
                 1.	Slick har ikke et særlig kraftigt mønster på dækket. Det er vigtigt når du kører på asfalt. Her er komfort, stabiliteten og styret på plads. Disse kan findes i forskellige mønstre. Vi vil anbefale denne hvis du kun ønsker at kører på landevej.
@@ -301,18 +327,22 @@
                 
                 
                 
-                </p> 
-                <h4 class="afsnitOS"> Affjedring</h4>
-                <p class="artikelP"> 
+                </p>
+                <img src="img/foto/tur/daekumoenster360.jpeg" alt="Jensen cyklers dæk uden mønster"  class="komponentPic">
+              </section>
+                <section class="komponenter">
+                <h4 class="komponentOS"> Affjedring</h4>
+                <p class="komponentP"> 
                   
                   Når du kører MTB, vil du ofte begive dig ud i ujævne terræner, hvorfor din affjedring har stor betydning for køreoplevelsen. Når det kommer til affjedring, har du to valg. Her kan du vælge mellem en Full Suspension mountainbike eller en Hardtail mountainbike. 
+                </p> 
+                <img src="img/foto/tur/suspension360.jpeg" alt="Jensen cyklers dæk"  class="komponentPic">
+                </section>
                   
-                  
-                  
-                  </p> 
-    </section>
-</article>
-
+              </div>
+                </article>
+ 
+</div>
 
 
 

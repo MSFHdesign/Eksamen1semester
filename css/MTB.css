@@ -1,338 +1,342 @@
 :root {
-    /* farver */
-    --blaa: #080332;
-    --graa: #f2f2f2;
-    --hvid: #ffffff;
-    --sort: #000000;
-    --groen: #128F01;
-    --transparent: 0.70;
-    --margin: 1em;
+  /* farver */
+  --blaa: #080332;
+  --graa: #f2f2f2;
+  --hvid: #ffffff;
+  --sort: #000000;
+  --groen: #128F01;
+  --transparent: 0.70;
+  --margin: 1em;
 }
 
 .wrapper{
-    padding: 0;
-    overflow-x: hidden;
-    margin: 0; /* Således går alt content het ud som standart, margin indstilles individuelt. */
-    display: grid;
-    background-color: var(--graa);
-    grid-template-areas:
-      "logo"
-      "nav"
-      "shop"
-      "guide"
-      "MTBtur"
-      "cardflex"
-      "footer";     
+  padding: 0;
+  overflow-x: hidden;
+  margin: 0; /* Således går alt content het ud som standart, margin indstilles individuelt. */
+  display: grid;
+  background-color: var(--graa);
+  grid-template-areas:
+    "logo"
+    "nav"
+    "shop"
+    "guide"
+    "MTBtur"
+    "cardflex"
+    "footer";     
 }
-      
+    
 
 /* Uanset behov, så har vi cyklen ansnit starter her  */
 .shop{
-    grid-area: shop;
-    margin: 0;
-    position: relative;
-    top: 0;
+  grid-area: shop;
+  margin: 0;
+  position: relative;
+  top: 0;
 }
 .Shop h2 {
-    margin-top: 0;
-    text-align: center;
-    background-color: var(--blaa);
-    color: white;
-    padding: 0.4em 0 0.4em 0;
-    font-size: 20px;
-    text-decoration: none;
+  margin-top: 0;
+  text-align: center;
+  background-color: var(--blaa);
+  color: white;
+  padding: 0.4em 0 0.4em 0;
+  font-size: 20px;
+  text-decoration: none;
 }
 
 #teaser {
-    z-index: 100;
-    text-align: center;
-    background-color: var(--blaa);
-    color: white;
-    padding: 0.4em 0 0.4em 0;
-    font-size: 20px;
-    position: relative;
-      top: 12rem;
+  z-index: 100;
+  text-align: center;
+  background-color: var(--blaa);
+  color: white;
+  padding: 0.4em 0 0.4em 0;
+  font-size: 20px;
+  position: relative;
+    top: 12rem;
 }
 #teaser a{
-  text-decoration: none;
-  color: white;
+text-decoration: none;
+color: white;
 
 }
 
 #shopPic {
-  z-index: 0;
-    position: relative;
-    margin-top: -5em;
-    width: 100%;
+z-index: 0;
+  position: relative;
+  margin-top: -5em;
+  width: 100%;
 }
 
 
 /* guide til køb af cykel */
 .guidetilcykel{
-    grid-area: guide;
-    z-index: 200;
-   margin-top: 2rem;
-   display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: auto;
-    color: white;
-    background-color: var(--blaa);
-    padding: 1.5em 0 1.5em 0;
-    min-height: 30vh;
+  grid-area: guide;
+  z-index: 200;
+ margin-top: 2rem;
+ display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  color: white;
+  background-color: var(--blaa);
+  padding: 1.5em 0 1.5em 0;
+  min-height: 30vh;
 }
 
 #OS {
-  position: relative;
-  top: 0;
+position: relative;
+top: 0;
 }
 .guidetilcykel a {
-    color: white;
+  color: white;
 }
 
 .guidetilcykel button{
-    border: 0.2rem solid white;
-    border-radius: 10px;
-    padding: 1.5rem;
-    color: white;
-    background: none;
-    position:relative;
+  border: 0.2rem solid white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  color: white;
+  background: none;
+  position:relative;
 }
 
 .guidetilcykel h2{
-    font-size: 20px;
-    margin: 0.5em;
+  font-size: 20px;
+  margin: 0.5em;
 }
 
 .guidetilcykel h3{
-    font-size: 15px;
-    margin: 0.5em;
+  font-size: 15px;
+  margin: 0.5em;
 }
 
 
 
 .output {
-    color: var(--blaa);
-    font-weight: bold;
-    font-size: 20px;
-    
+  color: var(--blaa);
+  font-weight: bold;
+  font-size: 20px;
+  
 }
 
 #budget {
-    display: none;
+  display: none;
 }
 
 #q1{
-    display: none;
+  display: none;
 }
 
 #q2{
-    display: none;
+  display: none;
 }
 
 #q3{
-    display: none;
+  display: none;
 }
 
 #q4{
-    display: none;
+  display: none;
 }
 
 #q4 h2 {
-    text-decoration: underline;
-    font-size: 30px;
+  text-decoration: underline;
+  font-size: 30px;
 }
 #q4 h4{
-    margin-bottom: -20px;
+  margin-bottom: -20px;
 }
 
 #ctaPris{
-    color: var(--graa);
-    text-decoration: underline;
-    font-weight: bold;
-    margin-top: -15px;
+  color: var(--graa);
+  text-decoration: underline;
+  font-weight: bold;
+  margin-top: -15px;
 }
 #q4pic{
-    
-    width: 90%;
-    height: auto;
+  
+  width: 90%;
+  height: auto;
 }
 
 .CTA {
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  border: 3px solid white;
-  border-radius: 10px;
-  padding: 1em 4em;
-  color: white;
-  background: none;
-  text-decoration: none;
+-webkit-appearance: button;
+-moz-appearance: button;
+appearance: button;
+border: 3px solid white;
+border-radius: 10px;
+padding: 1em 4em;
+color: white;
+background: none;
+text-decoration: none;
 
 }
 
 /* Slider starter her */
 
-  .container{ 
-      grid-area: MTBtur;
-      margin-top: -4rem;
-      cursor: pointer;
-      grid-area: MTBtur;
-      box-sizing: border-box;
-    width: 100%;
+.container{ 
+    grid-area: MTBtur;
+    margin-top: -4rem;
+    cursor: pointer;
+    grid-area: MTBtur;
+    box-sizing: border-box;
+  width: 100%;
 
-    height: auto;
-    position: relative;
-    overflow: hidden;
+  height: auto;
+  position: relative;
+  overflow: hidden;
 
-  }
-  #guidetrack{
-    font-size: 2rem;
-  }
+}
+#guidetrack{
+  font-size: 2rem;
+}
 
-  
-  .container h2{
-    z-index: 100;
-    text-align: center;
-    width: 100%;
-    background-color: var(--blaa);
-    color: white;
-    padding: 0.4em 0 0.4em 0;
-    font-size: 20px;
-    position: relative;
-    top: 80%;
-  }
+
+.container h2{
+  z-index: 100;
+  text-align: center;
+  width: 100%;
+  background-color: var(--blaa);
+  color: white;
+  padding: 0.4em 0 0.4em 0;
+  font-size: 20px;
+  position: relative;
+  top: 80%;
+}
 .container a{
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 #mobilPic{
-  min-width: 250px;
-  max-width: 500px;
+min-width: 250px;
+max-width: 500px;
 }
 
 #tabletPic {
-  min-width: 900px;
-  max-width: 900px;
-  display: none;
+min-width: 900px;
+max-width: 900px;
+display: none;
 }
 
 #widePic{
-  min-width: 1200;
-  max-width: 1200px;
-  display: none;
+min-width: 1200;
+max-width: 1200px;
+display: none;
 }
 
-  .sliderTilTyper{
-    width: 100%;
-    display: flex;
-    animation: slide 10s infinite; /* der bruges animation slide for at skifte billderne, men tidsinterval, uendeligt looping.  */
+.sliderTilTyper{
+  width: 100%;
+  display: flex;
+  animation: slide 10s infinite; /* der bruges animation slide for at skifte billderne, men tidsinterval, uendeligt looping.  */
+}
+
+.sliderTilTyper img{
+  width: 100%;
+}
+/* tids intervallet er opdelt i 8 så hver billede får lige lang tid. */
+@keyframes slide{ /* keyframes til animation */
+  0%{
+    transform: translateX(0%);
   }
-  
-  .sliderTilTyper img{
-    width: 100%;
- }
-  /* tids intervallet er opdelt i 8 så hver billede får lige lang tid. */
-  @keyframes slide{ /* keyframes til animation */
-    0%{
-      transform: translateX(0%);
-    }
-    25%{
-      transform: translateX(0%);
-    }
-    30%{
+  25%{
+    transform: translateX(0%);
+  }
+  30%{
+    transform: translateX(-100%);
+  }
+  50%{
       transform: translateX(-100%);
     }
-    50%{
-        transform: translateX(-100%);
-      }
-    55% {
-      transform: translateX(-200%);
-    }
-    75% {
-      transform: translateX(-200%);
-    }
-    80% {
-      transform: translateX(-300%);
-    }
-    100%{
-      transform: translateX(-300%);
-    }
+  55% {
+    transform: translateX(-200%);
+  }
+  75% {
+    transform: translateX(-200%);
+  }
+  80% {
+    transform: translateX(-300%);
+  }
+  100%{
+    transform: translateX(-300%);
+  }
+}
+
+
+
+/* Kort til næste tur */
+
+.korttiltur{
+    grid-area: cardflex;
+    text-align: center;
+}
+@media screen and (min-width: 500px){
+  #mobilPic {
+    display:none;
+  }
+  #tabletPic {
+    display:contents
   }
 
+}
 
 
-  /* Kort til næste tur */
-
-  .korttiltur{
-      grid-area: cardflex;
-      text-align: center;
+@media screen and (min-width: 900px){
+  
+  #shopPic{
+    max-height: 40vh;
   }
-  @media screen and (min-width: 500px){
-    #mobilPic {
-      display:none;
-    }
-    #tabletPic {
-      display:contents
-    }
-
+  #tabletPic {
+    display:none;
   }
 
+  #widePic{
 
-  @media screen and (min-width: 900px){
+    display: contents;
+  }
 
-    #tabletPic {
-      display:none;
-    }
+  .Shop h2{
+    font-size: 3em;
+    z-index: 10;
+  }
 
-    #widePic{
-      display: contents;
-    }
-
-    .Shop h2{
-      font-size: 3em;
-      z-index: 10;
-    }
-
-    #shopPic {
-    margin-top: -10em;
-    width: 100%;
+  #shopPic {
+  margin-top: -10em;
+  width: 100%;
 } 
 
 
 #teaser {
-  height: auto;
-  font-size: 2.5em;
+height: auto;
+font-size: 2.5em;
 
 }
 
 /* guide til køb af cykel */
 .guidetilcykel{
-  min-height: 50vh;
+min-height: 50vh;
 }
 
 .guidetilcykel button{
-  border: 3px solid white;
-  border-radius: 10px;
-  padding: 1em 4em;
-  color: white;
-  background: none;
+border: 3px solid white;
+border-radius: 10px;
+padding: 1em 4em;
+color: white;
+background: none;
 }
 
 .guidetilcykel h2{
-  font-size: 3em;
-  margin: 0.5em;
+font-size: 3em;
+margin: 0.5em;
 }
 
 #minS{
-  font-size: 1.5rem;
+font-size: 1.5rem;
 }
 
 .guidetilcykel h3{
-  font-size: 2em;
-  margin: 0.5em;
+font-size: 2em;
+margin: 0.5em;
 }
-  }
+}

@@ -8,6 +8,10 @@
     --transparent: 0.70;
     --margin: 1em;
   }
+
+ html {
+    scroll-behavior: smooth
+ } 
 .wrapper{
     padding: 0;
     overflow-x: hidden;
@@ -17,22 +21,53 @@
     grid-template-areas:
       "logo"
       "nav"
-      "1"
-      "2"
+      "artikel"
       "footer";     
 }
 .artikel{
+    grid-area: artikel;
     background: var(--graa);
+    display: flex;
 }
 
 .mainOS{
+    padding-bottom: 2px;
+    background: var(--blaa);
     margin: 1em 0 0 0;
+    font-size: 2.5rem;
     text-align: center;
-    color: var(--blaa);
+    color: white;
+}
+#links{
+    height: 72px;
+    box-sizing: border-box;
+    display: flex;
+        flex-direction: row;
+        justify-content: center;
+    background-color: var(--blaa);
+    margin: 0 0 1em 0 ;
+}
+.artikler a{
+    width: 72px;
+    border: 2px solid white;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+    background: var(--blaa);
+    color: white;
+    text-decoration: none;
+    padding: 0 2%;
+    text-align: center;
+    margin: 0 10px 10px 10px;
+}
+
+.artikler a:active{
+    background-color: darkcyan;
 }
 
 .artikelOS {
-    font-size: 2.5rem;
+    grid-area: artikelOS;
+    font-size: 2rem;
     text-transform: uppercase;
     text-align: center;
     color: white;
@@ -40,32 +75,98 @@
     padding: 1%;
     margin: 0em 0 0 0;
 }
-.afsnitOS {
-    font-size: 2rem;
-    text-align: center;
-    margin: 1em 0 0 0;
 
+.teasPIC{
+    width: 100%;
 }
 
-.artikler a{
-    color: red;
-    text-decoration: none;;
+.readmore {
+    grid-area: CTA;
+    width: 70%;
+    margin-left: 15%;
+    background-color: var(--blaa);
+    color: white;
+    border: 2px solid var(--groen);
+    font-size: 1.4rem;
+
 }
 
 .artikelP{
+    grid-area: text;
     margin: 0 0.5em 0 0.5em;
     font-size: 1.2rem;
 }
 
 .artikler img{
+    grid-area: pic;
     width: 100%;
     height: auto;
 }
-#skov{
-    grid-area: 1;
+
+.afsnitOS {
+    grid-area: afsnitOS;
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 1em 0 0 0;
+
 }
+#mereSkov {
+    display:none;
+}
+#mereVej {
+    display: none;
+}
+
+.komponentOS{
+    grid-area: OS;
+    margin: 1em 0 0 0;
+    text-align: center;
+    font-size: 1.8rem;
+}
+.komponentP{
+    grid-area: P;
+    font-size: 1.2rem;
+    margin: 0 0.5em 0 0.5em;
+}
+.komponentPic {
+    max-width: 70%;
+    margin-left: 15%;
+    grid-area: pic;
+}
+
+.komponenter {
+    display: grid;
+    grid-template-areas: 
+    "OS"
+    "P"
+    "pic"
+    ;
+}
+
 
 #landeveje {
     margin-top: 2em;
-    grid-area: 2;
+}
+@media screen and (min-width: 800px) {
+    .komponenter {
+        display: grid;
+        grid-template-areas: 
+        "OS OS"
+        "P pic"
+        "P pic"
+        ;
+        grid-template-columns: 70% 30%;
+    }
+    .komponentOS{
+        text-align: left;
+        grid-area: OS;
+        margin: 1em 0 0 1.2%;
+        font-size: 1.8rem;
+    }
+    .komponentP{
+        margin: 0 2%;
+    }
+    .komponentPic {
+        margin-right: 10%;
+    }
 }
